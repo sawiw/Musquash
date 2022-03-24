@@ -1,0 +1,69 @@
+body {
+  background-color: rgb(24, 23, 75);
+  color: rgb(255, 255, 255);
+  font-family: "Lexend", sans-serif;
+}
+nav {
+  margin: 2em;
+  display: flex;
+  justify-content: space-between;
+  a {
+    width: 20%;
+    min-width: 130px;
+  }
+  // .logoMusquashNavbar {width: 25%;}
+  .NavBtnContainer {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    label {
+      display: flex;
+    }
+  }
+  input {
+    background-color: transparent;
+    border: transparent;
+
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.Vitrine {
+  .heroContainer {
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    padding: 0 3em;
+
+    & > div {
+      border-radius: 50px;
+    }
+    .hero {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      cursor: pointer;
+    }
+    .hero:hover {
+      transform: scale(1.1);
+    }
+    .hero.Bleu {
+      background-color: blue;
+      width: 25%;
+      height: 100%;
+    }
+    .hero.Orange {
+      background-color: #f96244;
+      height: 100%;
+      width: 36%;
+    }
+  }
+  .bandeau-promo {
+    border: solid 5px #ffff00;
+  }
+}

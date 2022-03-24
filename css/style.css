@@ -1,0 +1,65 @@
+body {
+  background-color: #18174b;
+  color: white;
+  font-family: "Lexend", sans-serif;
+}
+
+nav {
+  margin: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  width: 20%;
+  min-width: 130px;
+}
+nav .NavBtnContainer {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .NavBtnContainer label {
+  display: flex;
+}
+nav input {
+  background-color: transparent;
+  border: transparent;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.Vitrine .heroContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+  padding: 0 3em;
+}
+.Vitrine .heroContainer > div {
+  border-radius: 50px;
+}
+.Vitrine .heroContainer .hero {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  cursor: pointer;
+}
+.Vitrine .heroContainer .hero:hover {
+  transform: scale(1.1);
+}
+.Vitrine .heroContainer .hero.Bleu {
+  background-color: blue;
+  width: 25%;
+  height: 100%;
+}
+.Vitrine .heroContainer .hero.Orange {
+  background-color: #f96244;
+  height: 100%;
+  width: 36%;
+}
+.Vitrine .bandeau-promo {
+  border: solid 5px #ffff00;
+}/*# sourceMappingURL=style.css.map */
