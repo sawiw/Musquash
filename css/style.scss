@@ -1,6 +1,13 @@
+// VARIABLES
+:root{
+    --bleu: #1F2EEC;
+    --banc: #FAFAFF;
+    --orange: #F96244;
+}
+
 body {
-  background-color: rgb(24, 23, 75);
-  color: rgb(255, 255, 255);
+  background-color: var(--blanc);
+  color: var(--blanc);
   font-family: "Lexend", sans-serif;
 }
 nav {
@@ -11,24 +18,39 @@ nav {
     width: 20%;
     min-width: 130px;
   }
-  // .logoMusquashNavbar {width: 25%;}
   .NavBtnContainer {
     width: 30%;
     display: flex;
     justify-content: space-between;
     label {
       display: flex;
-    }
-  }
-  input {
-    background-color: transparent;
-    border: transparent;
+      border-radius: 2em;
+      background-color:transparent;
+      cursor: pointer;
 
-    font-family: "Lexend";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
+      input {
+        background-color: transparent;
+        border: transparent;
+
+        font-family: "Lexend";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+    .btnConnexion {
+        background: var(--bleu);
+        input {
+            cursor: pointer;
+            color: var(--blanc)}
+        }
+        .btnInscription {
+            border: 3px solid var(--orange);
+            input {
+                color: var(--orange);
+        }
+    }
   }
 }
 
@@ -36,10 +58,12 @@ nav {
   .heroContainer {
     display: flex;
     justify-content: space-around;
-    height: 300px;
-    padding: 0 3em;
-
-    & > div {
+    height: 250px;
+    padding: 0 0em;
+    // #heroMuscu {background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
+    #heroMuscu {background: linear-gradient(143.76deg, #f96244cc 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);}
+    // #heroMuscu {background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);}
+    & > a {
       border-radius: 50px;
     }
     .hero {
@@ -49,16 +73,22 @@ nav {
       display: block;
       cursor: pointer;
     }
-    .hero:hover {
+    .illuHero {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    a:hover {
       transform: scale(1.1);
     }
     .hero.Bleu {
-      background-color: blue;
       width: 25%;
       height: 100%;
     }
+    .Bleu.Gauche{background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
+    .Bleu.Droite{background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
     .hero.Orange {
-      background-color: #f96244;
+      background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
       height: 100%;
       width: 36%;
     }

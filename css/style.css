@@ -1,6 +1,12 @@
+:root {
+  --bleu: #1F2EEC;
+  --banc: #FAFAFF;
+  --orange: #F96244;
+}
+
 body {
-  background-color: #18174b;
-  color: white;
+  background-color: var(--blanc);
+  color: var(--blanc);
   font-family: "Lexend", sans-serif;
 }
 
@@ -20,24 +26,43 @@ nav .NavBtnContainer {
 }
 nav .NavBtnContainer label {
   display: flex;
+  border-radius: 2em;
+  background-color: transparent;
+  cursor: pointer;
 }
-nav input {
+nav .NavBtnContainer label input {
   background-color: transparent;
   border: transparent;
   font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 28px;
+}
+nav .NavBtnContainer .btnConnexion {
+  background: var(--bleu);
+}
+nav .NavBtnContainer .btnConnexion input {
+  cursor: pointer;
+  color: var(--blanc);
+}
+nav .NavBtnContainer .btnInscription {
+  border: 3px solid var(--orange);
+}
+nav .NavBtnContainer .btnInscription input {
+  color: var(--orange);
 }
 
 .Vitrine .heroContainer {
   display: flex;
   justify-content: space-around;
-  height: 300px;
-  padding: 0 3em;
+  height: 250px;
+  padding: 0 0em;
 }
-.Vitrine .heroContainer > div {
+.Vitrine .heroContainer #heroMuscu {
+  background: linear-gradient(143.76deg, #f96244cc 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
+}
+.Vitrine .heroContainer > a {
   border-radius: 50px;
 }
 .Vitrine .heroContainer .hero {
@@ -47,16 +72,26 @@ nav input {
   display: block;
   cursor: pointer;
 }
-.Vitrine .heroContainer .hero:hover {
+.Vitrine .heroContainer .illuHero {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.Vitrine .heroContainer a:hover {
   transform: scale(1.1);
 }
 .Vitrine .heroContainer .hero.Bleu {
-  background-color: blue;
   width: 25%;
   height: 100%;
 }
+.Vitrine .heroContainer .Bleu.Gauche {
+  background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
+}
+.Vitrine .heroContainer .Bleu.Droite {
+  background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
+}
 .Vitrine .heroContainer .hero.Orange {
-  background-color: #f96244;
+  background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
   height: 100%;
   width: 36%;
 }
