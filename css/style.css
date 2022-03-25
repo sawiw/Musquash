@@ -1,12 +1,5 @@
-:root {
-  --bleu: #1F2EEC;
-  --banc: #FAFAFF;
-  --orange: #F96244;
-}
-
 body {
-  background-color: var(--blanc);
-  color: var(--blanc);
+  background-color: #FAFAFF;
   font-family: "Lexend", sans-serif;
 }
 
@@ -21,6 +14,7 @@ nav a {
 }
 nav .NavBtnContainer {
   width: 30%;
+  margin-right: 3em;
   display: flex;
   justify-content: space-between;
 }
@@ -28,9 +22,11 @@ nav .NavBtnContainer label {
   display: flex;
   border-radius: 2em;
   background-color: transparent;
+  height: 40px;
   cursor: pointer;
 }
 nav .NavBtnContainer label input {
+  width: 100%;
   background-color: transparent;
   border: transparent;
   font-family: "Lexend";
@@ -38,63 +34,108 @@ nav .NavBtnContainer label input {
   font-weight: 600;
   font-size: 16px;
   line-height: 28px;
+  margin-right: 1em;
+}
+nav .NavBtnContainer label img {
+  margin-left: 1em;
+  max-width: 30px;
 }
 nav .NavBtnContainer .btnConnexion {
-  background: var(--bleu);
+  background: #1F2EEC;
 }
 nav .NavBtnContainer .btnConnexion input {
   cursor: pointer;
-  color: var(--blanc);
+  color: #FAFAFF;
 }
 nav .NavBtnContainer .btnInscription {
-  border: 3px solid var(--orange);
+  border: 3px solid #F96244;
 }
 nav .NavBtnContainer .btnInscription input {
-  color: var(--orange);
+  color: #F96244;
 }
 
-.Vitrine .heroContainer {
+.heroContainer {
+  height: 55vh;
   display: flex;
   justify-content: space-around;
+  background-image: url(/ressources/images/hero-salle.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 1.4em;
+}
+.heroContainer .Presentation {
+  width: 80%;
+  padding: 3em 1em;
+}
+.heroContainer .Presentation h1 {
+  color: #F96244;
+  font-size: 3em;
+}
+.heroContainer .Presentation p {
+  color: #FAFAFF;
+  font-size: 1.5em;
+}
+.heroContainer .OffrePromos {
+  width: 20%;
+  padding: 1em;
+  background: #f9624483;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #FAFAFF;
+}
+.heroContainer .OffrePromos .offre1 {
+  background-color: red;
+  padding: 1em;
+}
+.heroContainer .OffrePromos .offre2 {
+  background-color: #b3ff00;
+}
+
+.Navigation {
+  width: 100%;
+}
+.Navigation .navContainer {
+  display: flex;
+  justify-content: space-evenly;
   height: 250px;
   padding: 0 0em;
 }
-.Vitrine .heroContainer #heroMuscu {
-  background: linear-gradient(143.76deg, #f96244cc 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
-}
-.Vitrine .heroContainer > a {
+.Navigation .navContainer > a {
   border-radius: 50px;
+  color: #FAFAFF;
 }
-.Vitrine .heroContainer .hero {
+.Navigation .navContainer .nav {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   display: block;
   cursor: pointer;
 }
-.Vitrine .heroContainer .illuHero {
+.Navigation .navContainer .illuHero {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-.Vitrine .heroContainer a:hover {
+.Navigation .navContainer a:hover {
   transform: scale(1.1);
 }
-.Vitrine .heroContainer .hero.Bleu {
+.Navigation .navContainer .nav.Bleu {
   width: 25%;
   height: 100%;
 }
-.Vitrine .heroContainer .Bleu.Gauche {
+.Navigation .navContainer .Bleu.Gauche {
   background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
 }
-.Vitrine .heroContainer .Bleu.Droite {
+.Navigation .navContainer .Bleu.Droite {
   background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
 }
-.Vitrine .heroContainer .hero.Orange {
+.Navigation .navContainer .nav.Orange {
   background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
   height: 100%;
   width: 36%;
 }
-.Vitrine .bandeau-promo {
+.Navigation .bandeau-promo {
   border: solid 5px #ffff00;
 }/*# sourceMappingURL=style.css.map */
