@@ -7,8 +7,9 @@ nav {
   margin: 2em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-nav a {
+nav .logoMusquashNavbar {
   width: 20%;
   min-width: 130px;
 }
@@ -16,13 +17,18 @@ nav .NavBtnContainer {
   width: 30%;
   margin-right: 3em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+nav .NavBtnContainer form {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 nav .NavBtnContainer label {
   display: flex;
   border-radius: 2em;
   background-color: transparent;
-  height: 40px;
+  max-height: 40px;
   cursor: pointer;
 }
 nav .NavBtnContainer label input {
@@ -138,4 +144,27 @@ nav .NavBtnContainer .btnInscription input {
 }
 .Navigation .bandeau-promo {
   border: solid 5px #ffff00;
+}
+
+.containerFormules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px red;
+}
+.containerFormules .Formule {
+  border: solid 1px #36e900;
+  background-color: #1F2EEC;
+  border-radius: 50px;
+  width: 95%;
+}
+
+.titreFormule {
+  margin: 3em;
+  display: flex;
+  height: 5vh;
+}
+.titreFormule .img-titre {
+  width: 50px;
+  margin-right: 2em;
 }/*# sourceMappingURL=style.css.map */
