@@ -1,13 +1,15 @@
 // VARIABLES
-:root{
-    --bleu: #1F2EEC;
-    --banc: #FAFAFF;
-    --orange: #F96244;
-}
+
+$blanc: #FAFAFF;
+$bleu :#1F2EEC;
+$orange: #F96244;
+
 
 body {
-  background-color: var(--blanc);
-  color: var(--blanc);
+  background-color:$blanc;
+  // color: $blanc;
+  // color:#FAFAFF ;
+
   font-family: "Lexend", sans-serif;
 }
 nav {
@@ -20,15 +22,18 @@ nav {
   }
   .NavBtnContainer {
     width: 30%;
+    margin-right: 3em;
     display: flex;
     justify-content: space-between;
     label {
       display: flex;
       border-radius: 2em;
       background-color:transparent;
+      height:40px;
       cursor: pointer;
-
+      
       input {
+        width: 100%;
         background-color: transparent;
         border: transparent;
 
@@ -37,36 +42,75 @@ nav {
         font-weight: 600;
         font-size: 16px;
         line-height: 28px;
+        margin-right: 1em;
+      }
+      img {
+        margin-left: 1em;
+        max-width: 30px;
       }
     }
     .btnConnexion {
-        background: var(--bleu);
+        background: $bleu;
         input {
             cursor: pointer;
-            color: var(--blanc)}
+            color: $blanc}
         }
-        .btnInscription {
-            border: 3px solid var(--orange);
-            input {
-                color: var(--orange);
+    .btnInscription {
+        border: 3px solid $orange;
+        input {
+            color: $orange;
         }
     }
   }
 }
 
-.Vitrine {
-  .heroContainer {
+.heroContainer {
+  height: 55vh;
+  display:flex;
+  justify-content: space-around;
+  background-image: url(/ressources/images/hero-salle.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom:1.4em;
+  .Presentation {
+    width: 80%;
+    padding:3em 1em;
+   h1 {color: $orange; font-size: 3em;}
+   p {color: $blanc; font-size:1.5em;}
+  }
+  .OffrePromos {
+    width:20%;
+    padding:1em;
+    background: #f9624483;
+
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    color: $blanc;
+    .offre1 {
+      background-color:red;
+      padding:1em ;
+    }
+    .offre2 {
+      background-color:rgb(179, 255, 0);
+    }
+  }
+}
+
+.Navigation {
+  width: 100%;
+  .navContainer {
+    display: flex;
+    justify-content: space-evenly;
+    // gap: -px;
     height: 250px;
     padding: 0 0em;
-    // #heroMuscu {background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
-    #heroMuscu {background: linear-gradient(143.76deg, #f96244cc 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);}
-    // #heroMuscu {background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);}
     & > a {
       border-radius: 50px;
+      color: $blanc
     }
-    .hero {
+    .nav {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -81,13 +125,13 @@ nav {
     a:hover {
       transform: scale(1.1);
     }
-    .hero.Bleu {
+    .nav.Bleu {
       width: 25%;
       height: 100%;
     }
     .Bleu.Gauche{background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
     .Bleu.Droite{background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
-    .hero.Orange {
+    .nav.Orange {
       background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
       height: 100%;
       width: 36%;
