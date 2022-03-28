@@ -1,3 +1,9 @@
+:root {
+  --blanc:#FAFAFF;
+  --bleu:#1F2EEC;
+  --orange: #F96244;
+}
+
 body {
   background-color: #FAFAFF;
   font-family: "Lexend", sans-serif;
@@ -62,8 +68,8 @@ nav .NavBtnContainer .btnInscription input {
 
 .heroContainer {
   height: 55vh;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 85% 15%;
   background-image: url(/ressources/images/hero-salle.png);
   background-size: cover;
   background-position: center center;
@@ -91,21 +97,27 @@ nav .NavBtnContainer .btnInscription input {
   justify-content: space-around;
   color: #FAFAFF;
 }
+.heroContainer .OffrePromos h1, .heroContainer .OffrePromos h2 {
+  font-size: 2.5vw;
+}
 .heroContainer .OffrePromos .offre1 {
   background-color: red;
   padding: 1em;
 }
 .heroContainer .OffrePromos .offre2 {
+  padding: 1em;
   background-color: #b3ff00;
 }
 
 .Navigation {
   width: 100%;
+  position: relative;
 }
 .Navigation .navContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 250px;
+  height: 25vh;
   padding: 0 0em;
 }
 .Navigation .navContainer > a {
@@ -129,7 +141,9 @@ nav .NavBtnContainer .btnInscription input {
 }
 .Navigation .navContainer .nav.Bleu {
   width: 25%;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .Navigation .navContainer .Bleu.Gauche {
   background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
@@ -139,7 +153,9 @@ nav .NavBtnContainer .btnInscription input {
 }
 .Navigation .navContainer .nav.Orange {
   background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 36%;
 }
 .Navigation .bandeau-promo {
@@ -151,9 +167,10 @@ nav .NavBtnContainer .btnInscription input {
   flex-direction: column;
   align-items: center;
   border: solid 1px red;
+  height: calc(100% + 30px);
 }
 .containerFormules .Formule {
-  border: solid 1px #36e900;
+  border: solid 10px #36e900;
   background-color: #1F2EEC;
   border-radius: 50px;
   width: 95%;
@@ -167,4 +184,47 @@ nav .NavBtnContainer .btnInscription input {
 .titreFormule .img-titre {
   width: 50px;
   margin-right: 2em;
+}
+
+.Formule {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  padding: 1em;
+  color: var(--blanc);
+}
+.Formule .Titre {
+  display: flex;
+  gap: 30px;
+}
+.Formule .Infos {
+  padding: 1em;
+}
+.Formule .Images {
+  display: flex;
+  grid-row-end: span 2;
+}
+.Formule .Images img {
+  border-radius: 28px;
+}
+.Formule .PlusDinfos {
+  position: relative;
+  z-index: 2;
+  top: -10%;
+  right: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Formule .NosAdhesions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .heroContainer {
+    grid-template-columns: 0;
+    grid-template-rows: 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

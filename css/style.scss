@@ -4,6 +4,12 @@ $blanc: #FAFAFF;
 $bleu :#1F2EEC;
 $orange: #F96244;
 
+:root {
+ --blanc :#FAFAFF;
+ --bleu :#1F2EEC;
+ --orange: #F96244;
+}
+
 
 body {
   background-color:$blanc;
@@ -69,8 +75,8 @@ nav {
 
 .heroContainer {
   height: 55vh;
-  display:flex;
-  justify-content: space-around;
+  display:grid;
+  grid-template-columns: 85% 15%;
   background-image: url(/ressources/images/hero-salle.png);
   background-size: cover;
   background-position: center center;
@@ -86,6 +92,7 @@ nav {
     width:20%;
     padding:1em;
     background: #f9624483;
+    h1,h2 {font-size:2.5vw}
 
     display: flex;
     flex-direction: column;
@@ -96,6 +103,7 @@ nav {
       padding:1em ;
     }
     .offre2 {
+      padding:1em ;
       background-color:rgb(179, 255, 0);
     }
   }
@@ -103,11 +111,13 @@ nav {
 
 .Navigation {
   width: 100%;
+  position: relative;
   .navContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     // gap: -px;
-    height: 250px;
+    height: 25vh;
     padding: 0 0em;
     & > a {
       border-radius: 50px;
@@ -130,13 +140,13 @@ nav {
     }
     .nav.Bleu {
       width: 25%;
-      height: 100%;
+      height: fit-content;
     }
     .Bleu.Gauche{background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
     .Bleu.Droite{background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
     .nav.Orange {
       background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
-      height: 100%;
+      height: fit-content;
       width: 36%;
     }
   }
@@ -151,8 +161,9 @@ nav {
   // justify-content:center;
   align-items: center;
   border:solid 1px rgb(255, 0, 0);
+  height:calc(100% + 30px);
   .Formule {
-   border:solid 1px rgb(54, 233, 0);
+   border:solid 10px rgb(54, 233, 0);
    background-color: $bleu;
    border-radius: 50px;
    width:95% ;
@@ -169,4 +180,48 @@ nav {
   
 }
 
+.Formule {
+  display: grid;
+  grid-template-columns:40% 60%;
+  grid-template-rows: auto;
+  padding:1em;
+  color: var(--blanc);
 
+  .Titre {
+    display: flex;
+    gap :30px;
+  }
+
+  .Infos {
+    padding:1em;
+  }
+  .Images {
+    display:flex;
+    grid-row-end: span 2 ;
+    img {
+      border-radius: 28px;
+    }
+  }
+
+  .PlusDinfos {
+    position: relative;
+    z-index: 2;
+    top: -10%;
+    right: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .NosAdhesions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heroContainer {
+    grid-template-columns: 0;
+    grid-template-rows: 1fr 1fr;
+  }
+}
