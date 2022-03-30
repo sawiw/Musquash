@@ -4,6 +4,53 @@
   --orange: #F96244;
 }
 
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.btnOrange {
+  cursor: pointer;
+  background: #F96244;
+  color: #FAFAFF;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px black;
+}
+.btnOrange:hover {
+  background: #FAFAFF;
+  border: 3px solid #F96244;
+  color: #F96244;
+}
+
+.btnBlancOrange {
+  cursor: pointer;
+  background: #FAFAFF;
+  color: #F96244;
+  border: 3px solid #F96244;
+  border-radius: 50px;
+}
+.btnBlancOrange:hover {
+  background: #FAFAFF;
+  border: 3px solid #F96244;
+  color: #F96244;
+}
+
+.btnBlancBleu {
+  background: #FAFAFF;
+  border: 3px solid #1F2EEC;
+  color: #1F2EEC;
+  border-radius: 50px;
+}
+.btnBlancBleu:hover {
+  background: #1F2EEC;
+  border: 3px solid transparent;
+  color: #FAFAFF;
+}
+
 body {
   background-color: #FAFAFF;
   font-family: "Lexend", sans-serif;
@@ -48,21 +95,35 @@ nav .NavBtnContainer label input {
   line-height: 28px;
   margin-right: 1em;
 }
-nav .NavBtnContainer label img {
-  margin-left: 1em;
-  max-width: 30px;
-}
 nav .NavBtnContainer .btnConnexion {
   background: #1F2EEC;
+  border: solid transparent;
 }
 nav .NavBtnContainer .btnConnexion input {
   cursor: pointer;
   color: #FAFAFF;
 }
+nav .NavBtnContainer svg {
+  stroke: #FAFAFF;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+nav .NavBtnContainer .btnConnexion:hover {
+  background: transparent;
+  border: solid #1F2EEC;
+}
+nav .NavBtnContainer .btnConnexion:hover input {
+  color: #1F2EEC;
+}
+nav .NavBtnContainer .btnConnexion:hover svg {
+  stroke: #1F2EEC;
+}
 nav .NavBtnContainer .btnInscription {
   border: 3px solid #F96244;
 }
 nav .NavBtnContainer .btnInscription input {
+  cursor: pointer;
   color: #F96244;
 }
 
@@ -82,23 +143,18 @@ nav .NavBtnContainer .btnInscription input {
 }
 .heroContainer .Presentation h1 {
   color: #F96244;
-  font-size: 3em;
+  font-size: 3vw;
 }
 .heroContainer .Presentation p {
   color: #FAFAFF;
-  font-size: 1.5em;
+  font-size: 2vw;
 }
 .heroContainer .OffrePromos {
-  width: 20%;
-  padding: 1em;
   background: #f9624483;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: #FAFAFF;
-}
-.heroContainer .OffrePromos h1, .heroContainer .OffrePromos h2 {
-  font-size: 2.5vw;
 }
 .heroContainer .OffrePromos .offre1 {
   background-color: red;
@@ -169,13 +225,6 @@ nav .NavBtnContainer .btnInscription input {
   border: solid 1px red;
   height: calc(100% + 30px);
 }
-.containerFormules .Formule {
-  border: solid 10px #36e900;
-  background-color: #1F2EEC;
-  border-radius: 50px;
-  width: 95%;
-}
-
 .titreFormule {
   margin: 3em;
   display: flex;
@@ -187,11 +236,16 @@ nav .NavBtnContainer .btnInscription input {
 }
 
 .Formule {
+  border: solid 10px #36e900;
+  background-color: #1F2EEC;
+  border-radius: 50px;
+  width: 95%;
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: auto;
   padding: 1em;
   color: var(--blanc);
+  margin-bottom: 3em;
 }
 .Formule .Titre {
   display: flex;
@@ -222,9 +276,24 @@ nav .NavBtnContainer .btnInscription input {
   align-items: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .heroContainer {
-    grid-template-columns: 0;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .heroContainer .Presentation h1 {
+    font-size: 100%;
+  }
+  .heroContainer .Presentation p {
+    font-size: 3vw;
+  }
+  .heroContainer .OffrePromos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heroContainer .Presentation h1 {
+    font-size: 6vw;
   }
 }/*# sourceMappingURL=style.css.map */

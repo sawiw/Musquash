@@ -9,7 +9,45 @@ $orange: #F96244;
  --bleu :#1F2EEC;
  --orange: #F96244;
 }
+.displayNone {display: none}
+.displayBlock {display: block;}
 
+.btnOrange {
+  cursor: pointer;
+  background: $orange;
+  color: $blanc;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  box-shadow:0 5px 15px  black;
+  &:hover {
+    background:$blanc;
+    border: 3px solid $orange;
+    color: $orange;
+  }
+}
+.btnBlancOrange {
+  cursor: pointer;
+  background: $blanc;
+  color: $orange;
+  border: 3px solid $orange;
+  border-radius: 50px;
+  &:hover {
+    background:$blanc;
+    border: 3px solid $orange;
+    color: $orange;
+  }
+}
+.btnBlancBleu {
+  background: $blanc;
+  border: 3px solid $bleu;
+  color: $bleu;
+  border-radius:50px;
+  &:hover {
+    background:$bleu;
+    border: 3px solid transparent;
+    color: $blanc;
+  }
+}
 
 body {
   background-color:$blanc;
@@ -54,24 +92,41 @@ nav {
         margin-right: 1em;
       }
       img {
-        margin-left: 1em;
-        max-width: 30px;
+        // margin-left: 1em;
+        // max-width: 30px;
       }
     }
     .btnConnexion {
         background: $bleu;
+        border: solid transparent;
         input {
             cursor: pointer;
             color: $blanc}
         }
+        svg {
+           stroke:$blanc;
+           stroke-width:2.5;
+           stroke-linecap:round;
+           stroke-linejoin:round;}
+    .btnConnexion:hover {
+        background: transparent;
+        border: solid $bleu;
+        input {
+          color: $bleu;
+        }
+        svg {
+          stroke:$bleu;
+        }        
+    }
     .btnInscription {
         border: 3px solid $orange;
         input {
+            cursor: pointer;
             color: $orange;
         }
     }
   }
-}
+} 
 
 .heroContainer {
   height: 55vh;
@@ -85,14 +140,16 @@ nav {
   .Presentation {
     width: 80%;
     padding:3em 1em;
-   h1 {color: $orange; font-size: 3em;}
-   p {color: $blanc; font-size:1.5em;}
+   h1 {
+     color: $orange; 
+     font-size: 3vw;
+  }
+   p {color: $blanc; font-size:2vw;}
   }
   .OffrePromos {
-    width:20%;
-    padding:1em;
+    // padding:1em;
     background: #f9624483;
-    h1,h2 {font-size:2.5vw}
+    // h1,h2 {font-size:2.5vw}
 
     display: flex;
     flex-direction: column;
@@ -163,10 +220,7 @@ nav {
   border:solid 1px rgb(255, 0, 0);
   height:calc(100% + 30px);
   .Formule {
-   border:solid 10px rgb(54, 233, 0);
-   background-color: $bleu;
-   border-radius: 50px;
-   width:95% ;
+  
  }
 }
 .titreFormule{
@@ -181,11 +235,16 @@ nav {
 }
 
 .Formule {
+  border:solid 10px rgb(54, 233, 0);
+  background-color: $bleu;
+  border-radius: 50px;
+  width:95% ;
   display: grid;
   grid-template-columns:40% 60%;
   grid-template-rows: auto;
   padding:1em;
   color: var(--blanc);
+  margin-bottom: 3em;
 
   .Titre {
     display: flex;
@@ -219,9 +278,23 @@ nav {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .heroContainer {
-    grid-template-columns: 0;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    .Presentation {
+      h1 {font-size:100%}
+      p {font-size:3vw;}
+    }
+    .OffrePromos {
+      display: grid;
+      grid-template-columns:1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .heroContainer .Presentation {
+    h1 {font-size: 6vw;}
   }
 }
