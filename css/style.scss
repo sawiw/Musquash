@@ -1,4 +1,6 @@
-// VARIABLES
+/*
+* CONSTANTES
+*/
 
 $blanc: #FAFAFF;
 $bleu :#1F2EEC;
@@ -9,10 +11,12 @@ $orange: #F96244;
  --bleu :#1F2EEC;
  --orange: #F96244;
 }
-.displayNone {display: none}
-.displayBlock {display: block;}
 
-.btnOrange {
+
+.display-none {display: none}
+.display-block {display: block;}
+
+.btn-orange {
   cursor: pointer;
   background: $orange;
   color: $blanc;
@@ -25,7 +29,7 @@ $orange: #F96244;
     color: $orange;
   }
 }
-.btnBlancOrange {
+.btn-blanc-orange {
   cursor: pointer;
   background: $blanc;
   color: $orange;
@@ -37,7 +41,7 @@ $orange: #F96244;
     color: $orange;
   }
 }
-.btnBlancBleu {
+.btn-blanc-bleu {
   background: $blanc;
   border: 3px solid $bleu;
   color: $bleu;
@@ -48,7 +52,20 @@ $orange: #F96244;
     color: $blanc;
   }
 }
+.titre-section{
+  margin: 3em;
+  display: flex;
+  justify-content: center;
+  height:5vh;
+  .img-titre{
+  width: 50px;
+  margin-right: 2em;
+}
 
+}
+/*
+* BODY
+*/
 body {
   background-color:$blanc;
   // color: $blanc;
@@ -56,80 +73,86 @@ body {
 
   font-family: "Lexend", sans-serif;
 }
+/*
+* INSCRIPTION / CONNNEXION
+*/
 nav {
   margin: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .logoMusquashNavbar {
+  .logo-musquash-navbar {
 
     width: 20%;
     min-width: 130px;
   }
-  .NavBtnContainer {
+  .nav-btn-container {
     width: 30%;
     margin-right: 3em;
     display: flex;
     justify-content: space-evenly;
-    form {height:fit-content;}
-    label {
-      display: flex;
-      border-radius: 2em;
-      background-color:transparent;
-      max-height:40px;
-      cursor: pointer;
-      
-      input {
-        width: 100%;
-        background-color: transparent;
-        border: transparent;
 
-        font-family: "Lexend";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 28px;
+    form {height:fit-content;}
+      
+      div {
+        display: flex;
+        border-radius: 2em;
+        background-color:transparent;
+        max-height:40px;
+        cursor: pointer;
+        
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: transparent;
+          
+          font-family: "Lexend";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 28px;
         margin-right: 1em;
       }
-      img {
-        // margin-left: 1em;
-        // max-width: 30px;
-      }
     }
-    .btnConnexion {
+    .btn-connexion {
         background: $bleu;
         border: solid transparent;
         input {
-            cursor: pointer;
-            color: $blanc}
+          cursor: pointer;
+          color: $blanc}
         }
         svg {
-           stroke:$blanc;
-           stroke-width:2.5;
-           stroke-linecap:round;
-           stroke-linejoin:round;}
-    .btnConnexion:hover {
-        background: transparent;
-        border: solid $bleu;
-        input {
-          color: $bleu;
-        }
-        svg {
-          stroke:$bleu;
-        }        
-    }
-    .btnInscription {
+          stroke:$blanc;
+          stroke-width:2.5;
+          stroke-linecap:round;
+          stroke-linejoin:round;}
+          .btn-connexion:hover {
+            background: transparent;
+              border: solid $bleu;
+              input {
+                color: $bleu;
+              }
+              svg {
+                stroke:$bleu;
+              }
+          }
+      .btn-inscription {
         border: 3px solid $orange;
         input {
-            cursor: pointer;
-            color: $orange;
+          cursor: pointer;
+          color: $orange;
         }
-    }
+        svg{fill:$orange}
+        }
+      
+    
   }
-} 
-
-.heroContainer {
-  height: 55vh;
+}
+  /*
+  * HERO + OFFRE PROMOS
+  */
+  .hero-container {
+  max-height: 55vh;
   display:grid;
   grid-template-columns: 85% 15%;
   background-image: url(/ressources/images/hero-salle.png);
@@ -137,16 +160,16 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   margin-bottom:1.4em;
-  .Presentation {
+  .presentation {
     width: 80%;
     padding:3em 1em;
    h1 {
-     color: $orange; 
+     color: $orange;
      font-size: 3vw;
   }
    p {color: $blanc; font-size:2vw;}
   }
-  .OffrePromos {
+  .offre-promos {
     // padding:1em;
     background: #f9624483;
     // h1,h2 {font-size:2.5vw}
@@ -165,16 +188,19 @@ nav {
     }
   }
 }
-
-.Navigation {
+/*
+* NAVIGATION MUSCU/SQUASH/GYM
+*/
+.navigation {
   width: 100%;
   position: relative;
-  .navContainer {
+  margin-bottom:2em;
+  .nav-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     // gap: -px;
-    height: 25vh;
+    max-height: fit-content;
     padding: 0 0em;
     & > a {
       border-radius: 50px;
@@ -187,7 +213,7 @@ nav {
       display: block;
       cursor: pointer;
     }
-    .illuHero {
+    .illu-hero {
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -195,13 +221,13 @@ nav {
     a:hover {
       transform: scale(1.1);
     }
-    .nav.Bleu {
+    .nav.bleu {
       width: 25%;
       height: fit-content;
     }
-    .Bleu.Gauche{background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
-    .Bleu.Droite{background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
-    .nav.Orange {
+    .bleu.gauche{background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
+    .bleu.droite{background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
+    .nav.orange {
       background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
       height: fit-content;
       width: 36%;
@@ -211,90 +237,89 @@ nav {
     border: solid 5px #ffff00;
   }
 }
-
-.containerFormules {
+/*
+* FORMULES
+*/
+.container-formules {
   display: flex;
   flex-direction: column;
   // justify-content:center;
   align-items: center;
   border:solid 1px rgb(255, 0, 0);
   height:calc(100% + 30px);
-  .Formule {
-  
- }
-}
-.titreFormule{
-  margin: 3em;
-  display: flex;
-  height:5vh;
-  .img-titre{
-    width: 50px;
-    margin-right: 2em;
-  }
-  
-}
 
-.Formule {
-  border:solid 10px rgb(54, 233, 0);
-  background-color: $bleu;
-  border-radius: 50px;
-  width:95% ;
-  display: grid;
-  grid-template-columns:40% 60%;
-  grid-template-rows: auto;
-  padding:1em;
-  color: var(--blanc);
-  margin-bottom: 3em;
 
-  .Titre {
-    display: flex;
-    gap :30px;
-  }
-
-  .Infos {
+  .formule {
+    border:solid 10px rgb(54, 233, 0);
+    background-color: $bleu;
+    border-radius: 50px;
+    width:95% ;
+    display: grid;
+    grid-template-columns:40% 60%;
+    grid-template-rows: auto;
     padding:1em;
-  }
-  .Images {
-    display:flex;
-    grid-row-end: span 2 ;
-    img {
-      border-radius: 28px;
+    color: var(--blanc);
+    margin-bottom: 3em;
+
+    .titre {
+      display: flex;
+      gap :30px;
+    }
+
+    .infos {
+      padding:1em;
+    }
+    .images {
+      display:flex;
+      grid-row-end: span 2 ;
+      img {
+        border-radius: 28px;
+      }
+    }
+
+    .plus-dinfos {
+      position: relative;
+      z-index: 2;
+      top: -10%;
+      right: 10%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .nos-adhesions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-
-  .PlusDinfos {
-    position: relative;
-    z-index: 2;
-    top: -10%;
-    right: 10%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .NosAdhesions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
-
+/*
+* MEDIA QUERIES RESPONSIVE
+*/
 @media screen and (max-width: 900px) {
-  .heroContainer {
+  .hero-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    .Presentation {
+    .presentation {
       h1 {font-size:100%}
       p {font-size:3vw;}
     }
-    .OffrePromos {
+    .offre-promos {
       display: grid;
       grid-template-columns:1fr 1fr;
     }
   }
 }
-
 @media screen and (max-width: 400px) {
-  .heroContainer .Presentation {
+  nav {
+    .nav-btn-container{display: none;}
+    button {
+      cursor: pointer;
+      background-color:transparent;
+      border: 0px transparent;
+    }
+  }
+  .hero-container .presentation {
     h1 {font-size: 6vw;}
   }
 }

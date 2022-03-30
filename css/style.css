@@ -1,18 +1,21 @@
+/*
+* CONSTANTES
+*/
 :root {
   --blanc:#FAFAFF;
   --bleu:#1F2EEC;
   --orange: #F96244;
 }
 
-.displayNone {
+.display-none {
   display: none;
 }
 
-.displayBlock {
+.display-block {
   display: block;
 }
 
-.btnOrange {
+.btn-orange {
   cursor: pointer;
   background: #F96244;
   color: #FAFAFF;
@@ -20,71 +23,88 @@
   border-radius: 50px;
   box-shadow: 0 5px 15px black;
 }
-.btnOrange:hover {
+.btn-orange:hover {
   background: #FAFAFF;
   border: 3px solid #F96244;
   color: #F96244;
 }
 
-.btnBlancOrange {
+.btn-blanc-orange {
   cursor: pointer;
   background: #FAFAFF;
   color: #F96244;
   border: 3px solid #F96244;
   border-radius: 50px;
 }
-.btnBlancOrange:hover {
+.btn-blanc-orange:hover {
   background: #FAFAFF;
   border: 3px solid #F96244;
   color: #F96244;
 }
 
-.btnBlancBleu {
+.btn-blanc-bleu {
   background: #FAFAFF;
   border: 3px solid #1F2EEC;
   color: #1F2EEC;
   border-radius: 50px;
 }
-.btnBlancBleu:hover {
+.btn-blanc-bleu:hover {
   background: #1F2EEC;
   border: 3px solid transparent;
   color: #FAFAFF;
 }
 
+.titre-section {
+  margin: 3em;
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+}
+.titre-section .img-titre {
+  width: 50px;
+  margin-right: 2em;
+}
+
+/*
+* BODY
+*/
 body {
   background-color: #FAFAFF;
   font-family: "Lexend", sans-serif;
 }
 
+/*
+* INSCRIPTION / CONNNEXION
+*/
 nav {
   margin: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .logoMusquashNavbar {
+nav .logo-musquash-navbar {
   width: 20%;
   min-width: 130px;
 }
-nav .NavBtnContainer {
+nav .nav-btn-container {
   width: 30%;
   margin-right: 3em;
   display: flex;
   justify-content: space-evenly;
 }
-nav .NavBtnContainer form {
+nav .nav-btn-container form {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-nav .NavBtnContainer label {
+nav .nav-btn-container div {
   display: flex;
   border-radius: 2em;
   background-color: transparent;
   max-height: 40px;
   cursor: pointer;
 }
-nav .NavBtnContainer label input {
+nav .nav-btn-container div input {
   width: 100%;
   background-color: transparent;
   border: transparent;
@@ -95,40 +115,46 @@ nav .NavBtnContainer label input {
   line-height: 28px;
   margin-right: 1em;
 }
-nav .NavBtnContainer .btnConnexion {
+nav .nav-btn-container .btn-connexion {
   background: #1F2EEC;
   border: solid transparent;
 }
-nav .NavBtnContainer .btnConnexion input {
+nav .nav-btn-container .btn-connexion input {
   cursor: pointer;
   color: #FAFAFF;
 }
-nav .NavBtnContainer svg {
+nav .nav-btn-container svg {
   stroke: #FAFAFF;
   stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-nav .NavBtnContainer .btnConnexion:hover {
+nav .nav-btn-container .btn-connexion:hover {
   background: transparent;
   border: solid #1F2EEC;
 }
-nav .NavBtnContainer .btnConnexion:hover input {
+nav .nav-btn-container .btn-connexion:hover input {
   color: #1F2EEC;
 }
-nav .NavBtnContainer .btnConnexion:hover svg {
+nav .nav-btn-container .btn-connexion:hover svg {
   stroke: #1F2EEC;
 }
-nav .NavBtnContainer .btnInscription {
+nav .nav-btn-container .btn-inscription {
   border: 3px solid #F96244;
 }
-nav .NavBtnContainer .btnInscription input {
+nav .nav-btn-container .btn-inscription input {
   cursor: pointer;
   color: #F96244;
 }
+nav .nav-btn-container .btn-inscription svg {
+  fill: #F96244;
+}
 
-.heroContainer {
-  height: 55vh;
+/*
+* HERO + OFFRE PROMOS
+*/
+.hero-container {
+  max-height: 55vh;
   display: grid;
   grid-template-columns: 85% 15%;
   background-image: url(/ressources/images/hero-salle.png);
@@ -137,105 +163,104 @@ nav .NavBtnContainer .btnInscription input {
   background-repeat: no-repeat;
   margin-bottom: 1.4em;
 }
-.heroContainer .Presentation {
+.hero-container .presentation {
   width: 80%;
   padding: 3em 1em;
 }
-.heroContainer .Presentation h1 {
+.hero-container .presentation h1 {
   color: #F96244;
   font-size: 3vw;
 }
-.heroContainer .Presentation p {
+.hero-container .presentation p {
   color: #FAFAFF;
   font-size: 2vw;
 }
-.heroContainer .OffrePromos {
+.hero-container .offre-promos {
   background: #f9624483;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: #FAFAFF;
 }
-.heroContainer .OffrePromos .offre1 {
+.hero-container .offre-promos .offre1 {
   background-color: red;
   padding: 1em;
 }
-.heroContainer .OffrePromos .offre2 {
+.hero-container .offre-promos .offre2 {
   padding: 1em;
   background-color: #b3ff00;
 }
 
-.Navigation {
+/*
+* NAVIGATION MUSCU/SQUASH/GYM
+*/
+.navigation {
   width: 100%;
   position: relative;
+  margin-bottom: 2em;
 }
-.Navigation .navContainer {
+.navigation .nav-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 25vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   padding: 0 0em;
 }
-.Navigation .navContainer > a {
+.navigation .nav-container > a {
   border-radius: 50px;
   color: #FAFAFF;
 }
-.Navigation .navContainer .nav {
+.navigation .nav-container .nav {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   display: block;
   cursor: pointer;
 }
-.Navigation .navContainer .illuHero {
+.navigation .nav-container .illu-hero {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-.Navigation .navContainer a:hover {
+.navigation .nav-container a:hover {
   transform: scale(1.1);
 }
-.Navigation .navContainer .nav.Bleu {
+.navigation .nav-container .nav.bleu {
   width: 25%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-.Navigation .navContainer .Bleu.Gauche {
+.navigation .nav-container .bleu.gauche {
   background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
 }
-.Navigation .navContainer .Bleu.Droite {
+.navigation .nav-container .bleu.droite {
   background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
 }
-.Navigation .navContainer .nav.Orange {
+.navigation .nav-container .nav.orange {
   background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: 36%;
 }
-.Navigation .bandeau-promo {
+.navigation .bandeau-promo {
   border: solid 5px #ffff00;
 }
 
-.containerFormules {
+/*
+* FORMULES
+*/
+.container-formules {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 1px red;
   height: calc(100% + 30px);
 }
-.titreFormule {
-  margin: 3em;
-  display: flex;
-  height: 5vh;
-}
-.titreFormule .img-titre {
-  width: 50px;
-  margin-right: 2em;
-}
-
-.Formule {
+.container-formules .formule {
   border: solid 10px #36e900;
   background-color: #1F2EEC;
   border-radius: 50px;
@@ -247,21 +272,21 @@ nav .NavBtnContainer .btnInscription input {
   color: var(--blanc);
   margin-bottom: 3em;
 }
-.Formule .Titre {
+.container-formules .formule .titre {
   display: flex;
   gap: 30px;
 }
-.Formule .Infos {
+.container-formules .formule .infos {
   padding: 1em;
 }
-.Formule .Images {
+.container-formules .formule .images {
   display: flex;
   grid-row-end: span 2;
 }
-.Formule .Images img {
+.container-formules .formule .images img {
   border-radius: 28px;
 }
-.Formule .PlusDinfos {
+.container-formules .formule .plus-dinfos {
   position: relative;
   z-index: 2;
   top: -10%;
@@ -270,30 +295,42 @@ nav .NavBtnContainer .btnInscription input {
   justify-content: flex-end;
   align-items: center;
 }
-.Formule .NosAdhesions {
+.container-formules .formule .nos-adhesions {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*
+* MEDIA QUERIES RESPONSIVE
+*/
 @media screen and (max-width: 900px) {
-  .heroContainer {
+  .hero-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  .heroContainer .Presentation h1 {
+  .hero-container .presentation h1 {
     font-size: 100%;
   }
-  .heroContainer .Presentation p {
+  .hero-container .presentation p {
     font-size: 3vw;
   }
-  .heroContainer .OffrePromos {
+  .hero-container .offre-promos {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 400px) {
-  .heroContainer .Presentation h1 {
+  nav .nav-btn-container {
+    display: none;
+  }
+  nav button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px transparent;
+  }
+
+  .hero-container .presentation h1 {
     font-size: 6vw;
   }
 }/*# sourceMappingURL=style.css.map */
