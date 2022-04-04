@@ -2,29 +2,33 @@
 * CONSTANTES
 */
 
-$blanc: #FAFAFF;
-$bleu :#1F2EEC;
-$orange: #F96244;
+$blanc: #fafaff;
+$bleu: #1f2eec;
+$orange: #f96244;
 
 :root {
- --blanc :#FAFAFF;
- --bleu :#1F2EEC;
- --orange: #F96244;
+  --blanc: #fafaff;
+  --bleu: #1f2eec;
+  --orange: #f96244;
 }
 
-
-.display-none {display: none}
-.display-block {display: block;}
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
 
 .btn-orange {
+  height: fit-content;
   cursor: pointer;
   background: $orange;
   color: $blanc;
   border: 3px solid transparent;
   border-radius: 50px;
-  box-shadow:0 5px 15px  black;
+  box-shadow: 0 5px 15px black;
   &:hover {
-    background:$blanc;
+    background: $blanc;
     border: 3px solid $orange;
     color: $orange;
   }
@@ -36,7 +40,7 @@ $orange: #F96244;
   border: 3px solid $orange;
   border-radius: 50px;
   &:hover {
-    background:$blanc;
+    background: $blanc;
     border: 3px solid $orange;
     color: $orange;
   }
@@ -45,29 +49,28 @@ $orange: #F96244;
   background: $blanc;
   border: 3px solid $bleu;
   color: $bleu;
-  border-radius:50px;
+  border-radius: 50px;
   &:hover {
-    background:$bleu;
+    background: $bleu;
     border: 3px solid transparent;
     color: $blanc;
   }
 }
-.titre-section{
+.titre-section {
   margin: 3em;
   display: flex;
   justify-content: center;
-  height:5vh;
-  .img-titre{
-  width: 50px;
-  margin-right: 2em;
-}
-
+  height: 5vh;
+  .img-titre {
+    width: 50px;
+    margin-right: 2em;
+  }
 }
 /*
 * BODY
 */
 body {
-  background-color:$blanc;
+  background-color: $blanc;
   // color: $blanc;
   // color:#FAFAFF ;
 
@@ -82,109 +85,123 @@ nav {
   justify-content: space-between;
   align-items: center;
   .logo-musquash-navbar {
-
     width: 20%;
     min-width: 130px;
   }
   .nav-btn-container {
-    width: 30%;
-    margin-right: 3em;
     display: flex;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: space-between;
 
-    form {height:fit-content;}
-      
-      div {
-        display: flex;
-        border-radius: 2em;
-        background-color:transparent;
-        max-height:40px;
-        cursor: pointer;
-        
-        input {
-          width: 100%;
-          background-color: transparent;
-          border: transparent;
-          
-          font-family: "Lexend";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 28px;
+    form {
+      height: fit-content;
+    }
+
+    div {
+      display: flex;
+      border-radius: 2em;
+      background-color: transparent;
+      max-height: 40px;
+      cursor: pointer;
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: transparent;
+
+        font-family: "Lexend";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
         margin-right: 1em;
       }
     }
     .btn-connexion {
-        background: $bleu;
-        border: solid transparent;
-        input {
-          cursor: pointer;
-          color: $blanc}
-        }
-        svg {
-          stroke:$blanc;
-          stroke-width:2.5;
-          stroke-linecap:round;
-          stroke-linejoin:round;}
-          .btn-connexion:hover {
-            background: transparent;
-              border: solid $bleu;
-              input {
-                color: $bleu;
-              }
-              svg {
-                stroke:$bleu;
-              }
-          }
-      .btn-inscription {
-        border: 3px solid $orange;
-        input {
-          cursor: pointer;
-          color: $orange;
-        }
-        svg{fill:$orange}
-        }
-      
-    
+      background: $bleu;
+      border: solid transparent;
+      input {
+        cursor: pointer;
+        color: $blanc;
+      }
+      svg {
+        stroke: $blanc;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+    .btn-connexion:hover {
+      background: transparent;
+      border: solid $bleu;
+      input {
+        color: $bleu;
+      }
+      svg {
+        stroke: $bleu;
+      }
+    }
+    .btn-inscription {
+      display: flex;
+      align-items: center;
+      background: $blanc;
+      border: solid $orange;
+      input {
+        cursor: pointer;
+        color: $orange;
+      }
+      svg {
+        margin-left: 1em;
+      }
+    }
+    .btn-inscription:hover {
+      background: $orange;
+      border: solid transparent;
+      input {
+        color: $blanc;
+      }
+      svg {
+        stroke: $blanc;
+        stroke-width: 1.5;
+      }
+    }
   }
 }
-  /*
+/*
   * HERO + OFFRE PROMOS
   */
-  .hero-container {
+.hero-container {
   max-height: 55vh;
-  display:grid;
-  grid-template-columns: 85% 15%;
+  display: grid;
+  grid-template-columns: 80% auto;
   background-image: url(/ressources/images/hero-salle.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-bottom:1.4em;
+  margin-bottom: 1.4em;
   .presentation {
     width: 80%;
-    padding:3em 1em;
-   h1 {
-     color: $orange;
-     font-size: 3vw;
-  }
-   p {color: $blanc; font-size:2vw;}
+    padding: 3em 1em;
+    h1 {
+      color: $orange;
+      font-size: 3vw;
+    }
+    p {
+      color: $blanc;
+      font-size: 2vw;
+    }
   }
   .offre-promos {
-    // padding:1em;
-    background: #f9624483;
-    // h1,h2 {font-size:2.5vw}
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: auto auto;
     color: $blanc;
     .offre1 {
-      background-color:red;
-      padding:1em ;
+      background-color: red;
+      padding: 1em;
     }
     .offre2 {
-      padding:1em ;
-      background-color:rgb(179, 255, 0);
+      padding: 1em;
+      background-color: rgb(179, 255, 0);
     }
   }
 }
@@ -194,17 +211,16 @@ nav {
 .navigation {
   width: 100%;
   position: relative;
-  margin-bottom:2em;
+  margin-bottom: 2em;
   .nav-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    // gap: -px;
+    display: grid;
+    grid-template-columns:25% 50% 25% ;
     max-height: fit-content;
     padding: 0 0em;
     & > a {
       border-radius: 50px;
-      color: $blanc
+      color: $blanc;
+      width: 110px;
     }
     .nav {
       text-align: center;
@@ -214,23 +230,40 @@ nav {
       cursor: pointer;
     }
     .illu-hero {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
     }
     a:hover {
       transform: scale(1.1);
     }
     .nav.bleu {
-      width: 25%;
       height: fit-content;
+      width: 100%;
     }
-    .bleu.gauche{background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
-    .bleu.droite{background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);}
+    .bleu.gauche {
+      background: linear-gradient(
+        117.36deg,
+        rgba(31, 46, 236, 0.8) 0%,
+        rgba(31, 46, 236, 0.464) 100%
+      );
+    }
+    .bleu.droite {
+      background: linear-gradient(
+        242.64deg,
+        rgba(31, 46, 236, 0.8) 0%,
+        rgba(31, 46, 236, 0.464) 100%
+      );
+    }
     .nav.orange {
-      background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
-      height: fit-content;
-      width: 36%;
+      background: linear-gradient(
+        143.76deg,
+        rgba(249, 98, 68, 0.8) 47.15%,
+        rgba(249, 98, 68, 0.612806) 83.1%,
+        rgba(249, 98, 68, 0.4) 113.68%
+      );
+      // height: fit-content;
+      width: 100%;
     }
   }
   .bandeau-promo {
@@ -243,35 +276,30 @@ nav {
 .container-formules {
   display: flex;
   flex-direction: column;
-  // justify-content:center;
+  justify-content: space-around;
   align-items: center;
-  border:solid 1px rgb(255, 0, 0);
-  height:calc(100% + 30px);
-
+  height: calc(100% + 30px);
 
   .formule {
-    border:solid 10px rgb(54, 233, 0);
     background-color: $bleu;
     border-radius: 50px;
-    width:95% ;
+    width: 95%;
     display: grid;
-    grid-template-columns:40% 60%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto;
-    padding:1em;
+    padding: 1em;
     color: var(--blanc);
     margin-bottom: 3em;
 
     .titre {
       display: flex;
-      gap :30px;
+      gap: 30px;
     }
 
     .infos {
-      padding:1em;
+      padding: 1em;
     }
     .images {
-      display:flex;
-      grid-row-end: span 2 ;
       img {
         border-radius: 28px;
       }
@@ -287,11 +315,18 @@ nav {
       align-items: center;
     }
     .nos-adhesions {
+      margin-top: 1em;
+      width: 100%;
       display: flex;
-      justify-content: center;
+      grid-column-end: span 2;
+      justify-content: space-around;
       align-items: center;
     }
   }
+}
+.container-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 /*
 * MEDIA QUERIES RESPONSIVE
@@ -301,25 +336,47 @@ nav {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     .presentation {
-      h1 {font-size:100%}
-      p {font-size:3vw;}
+      h1 {
+        font-size: 100%;
+      }
+      p {
+        font-size: 3vw;
+      }
     }
     .offre-promos {
       display: grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
+  }
+}
+@media screen and (max-width: 900px) {
+  .container-formules .formule {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
 }
 @media screen and (max-width: 400px) {
   nav {
-    .nav-btn-container{display: none;}
+    .nav-btn-container {
+      display: none;
+    }
     button {
       cursor: pointer;
-      background-color:transparent;
+      background-color: transparent;
       border: 0px transparent;
     }
   }
-  .hero-container .presentation {
-    h1 {font-size: 6vw;}
+  .hero-container {
+    .presentation {
+      h1 {
+        font-size: 7vw;
+      }
+    }
+    .offre-promos {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      transform: scale(0.9);
+    }
   }
 }
