@@ -14,8 +14,8 @@
 
 <html>
 <head>
-<meta charset="UTF‐8">
-<meta name="viewport" content="width=device‐width, initial‐scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>formulaire</title>
 <!-- inclus bootstrap via CDN = Content Delivery Network (réseau de distribution de contenu) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -42,7 +42,7 @@
     Entrez votre date de naissance: <input type="date" name="naissance" required></br>
 
     <button class="btn btn-outline-success" type="submit"> valider </button>
-
+    <h1>TEST</h1>
     </form>
   </div>
 
