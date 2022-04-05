@@ -165,6 +165,9 @@ nav .nav-btn-container .btn-inscription:hover svg {
   stroke: #fafaff;
   stroke-width: 1.5;
 }
+nav .btn-profile {
+  display: none;
+}
 
 /*
   * HERO + OFFRE PROMOS
@@ -212,53 +215,42 @@ nav .nav-btn-container .btn-inscription:hover svg {
   width: 100%;
   position: relative;
   margin-bottom: 2em;
-}
-.navigation .nav-container {
   display: grid;
-  grid-template-columns: 25% 50% 25%;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  padding: 0 0em;
+  grid-template-columns: 24% 50% 24%;
+  padding: 0 2em;
 }
-.navigation .nav-container > a {
+.navigation a {
   border-radius: 50px;
   color: #fafaff;
-  width: 110px;
 }
-.navigation .nav-container .nav {
+.navigation .nav {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   display: block;
   cursor: pointer;
 }
-.navigation .nav-container .illu-hero {
+.navigation .illu-hero {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-.navigation .nav-container a:hover {
+.navigation a:hover {
   transform: scale(1.1);
 }
-.navigation .nav-container .nav.bleu {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.navigation .nav.bleu {
   width: 100%;
+  height: 100%;
 }
-.navigation .nav-container .bleu.gauche {
+.navigation .bleu.gauche {
   background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
 }
-.navigation .nav-container .bleu.droite {
+.navigation .bleu.droite {
   background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
 }
-.navigation .nav-container .nav.orange {
-  background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
+.navigation .nav.orange {
   width: 100%;
-}
-.navigation .bandeau-promo {
-  border: solid 5px #ffff00;
+  background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
 }
 
 /*
@@ -333,8 +325,7 @@ nav .nav-btn-container .btn-inscription:hover svg {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-}
-@media screen and (max-width: 900px) {
+
   .container-formules .formule {
     display: grid;
     grid-template-columns: 1fr;
@@ -350,6 +341,9 @@ nav .nav-btn-container .btn-inscription:hover svg {
     background-color: transparent;
     border: 0px transparent;
   }
+  nav .btn-profile {
+    display: block;
+  }
 
   .hero-container .presentation h1 {
     font-size: 7vw;
@@ -358,5 +352,18 @@ nav .nav-btn-container .btn-inscription:hover svg {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 610px) {
+  nav .nav-btn-container {
+    display: none;
+  }
+  nav button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px transparent;
+  }
+  nav .btn-profile {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
