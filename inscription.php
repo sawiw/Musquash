@@ -2,7 +2,7 @@
 /*
 * inscription.php
 * page d'inscription du projet musquash
-*
+* VIEILLE BRANCHE
 * @auteur: A Soupa
 * @date: 03/2022
 */
