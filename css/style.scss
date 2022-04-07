@@ -18,7 +18,9 @@ $orange: #f96244;
 .display-block {
   display: block;
 }
-
+thead,tbody,tr,td,table,th{
+  text-align: center;
+  border:solid black;}
 .btn-orange {
   height: fit-content;
   cursor: pointer;
@@ -320,10 +322,10 @@ nav {
     }
   }
 }
-.container-services {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+// .container-services {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+// }
 /*
 * MEDIA QUERIES RESPONSIVE
 */
