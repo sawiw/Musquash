@@ -6,26 +6,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/reset.css">
+  rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/reset.css">
   <title>Musquash</title>
 </head>
 
 <body>
+  <!-- AJOUT INSCRIPTION MOD ERWANN -->
+  <div id="testPopUpInscription" class="cachee testPopUp">
+    <form  action="/musquash/validationInscription.php" method="POST"> 
+      <!-- onsubmit="return validationInscription()" -->
+      <h2>Formulaire d'inscription &nbsp;<button id="fermePopupInscription">❌</button></h2>
+      
+      
+      <label for="login">Login : </label>
+      <input required type="text" maxlength="20" name="login" id="login">
+      
+      <label for="nom">Nom : </label>
+      <input type="text" name="nom" id="nom" maxlength="30" required>
+      <label for="prenom">Prenom : </label>
+      <input type="text" name="prenom" id="prenom" maxlength="30" required>
+      
+      <label for="dateNaissance">Date de naissance : </label>
+      <input required type="date" name="dateNaissance" id="dateNaissance">
+      
+      <label for="mail">Mail : </label>
+      <input type="email" name="mail" id="mail" maxlength="30" required>
+      <br>
+      <input type="submit" value="S'inscrire" id="validerInscription">
+      <br>
+      <div>
+        <img src="/ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
+      </div>
+    </form>
+      
+    </div>
+  
+    <!-- AJOUT CONNEXION MOD ERWANN -->
+    <div id="testPopUpConnexion" class="cachee testPopUp">
+      <form  action="/musquash/validationConnexion.php" method="POST">
+        <h2>Connexion <button id="fermePopUpConnexion">❌</button></h2>
+        
+      
+      <label for="mailConnexion">Mail utilisateur: </label>
+      <input required type="text" maxlength="30" name="mailConnexion" id="mailConnexion">
+      
+      
+      <label for="mdpConnexion">Mot de passe : </label>
+      <input required type="password" minlength="8" maxlength="50" name="mdpConnexion" id="mdpConnexion">
+      
+      
+      <input type="submit" value="Se connecter" id="validerConnexion">
+      <br>
+      <div>
+        <img src="/ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
+      </div>
+    </form>
+      
+    </div>
   <!-- Navbar -->
   <nav>
     <!-- Logo Musquash -->
     <a href="index.html" class="logo-musquash-navbar">
       <img src="./ressources/images/logo_musquash.svg" alt="Logo_Musquash">
     </a>
-    <button class="btn-profile">
-      <img src="/ressources/icons/icone-profile.svg" alt="icone-profile"">
+    <button class="btn-profile" id="btnProfile">
+      <img src="./ressources/icons/icone-profile.svg" alt="icone-profile">
     </button>
       <!-- Container bouton ISCRIPTION / CONNEXION  -->
-      <form name=" btnInscription/Connexion" action="" class="nav-btn-container" action="test-button" method="POST">
+      <!-- ENLEVE PAR ERWANN -->
+      <!-- <form name=" btnInscription/Connexion" action="" class="nav-btn-container" method="POST"> -->
+      <div class="nav-btn-container">
       <!-- Bouton s'inscrire -->
-      <div class="btn-inscription">
+      <div id="btnInscription" class="btn-inscription">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path
             d="M17.5 10H5.83333C5.61232 10 5.40036 9.9122 5.24408 9.75592C5.0878 9.59964 5 9.38768 5 9.16667V5.83333C5 5.61232 5.0878 5.40036 5.24408 5.24408C5.40036 5.0878 5.61232 5 5.83333 5H17.5C17.721 5 17.933 5.0878 18.0893 5.24408C18.2455 5.40036 18.3333 5.61232 18.3333 5.83333V9.16667C18.3333 9.38768 18.2455 9.59964 18.0893 9.75592C17.933 9.9122 17.721 10 17.5 10ZM6.66667 8.33333H16.6667V6.61667H6.66667V8.33333Z"
             fill="#F96244" /><path
@@ -41,17 +95,20 @@
             fill="#F96244" />
         </svg>
 
-        <input type="submit" name="inscription" value="S'INSCRIRE">
+        <!-- <input id="btnInscription" type="submit" name="inscription" value="S'INSCRIRE"> -->
+        <p>S'INSCRIRE</p>
       </div>
       <!-- Bouton se connecter -->
-      <div class="btn-connexion">
+      <div id="btnConnexion" class="btn-connexion">
         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M11 22V23.375C11 24.469 11.4346 25.5182 12.2082 26.2918C12.9818 27.0654 14.031 27.5 15.125 27.5H24.75C25.844 27.5 26.8932 27.0654 27.6668 26.2918C28.4404 25.5182 28.875 24.469 28.875 23.375V9.625C28.875 8.53098 28.4404 7.48177 27.6668 6.70818C26.8932 5.9346 25.844 5.5 24.75 5.5H15.125C14.031 5.5 12.9818 5.9346 12.2082 6.70818C11.4346 7.48177 11 8.53098 11 9.625V11M17.875 22L23.375 16.5L17.875 22ZM23.375 16.5L17.875 11L23.375 16.5ZM23.375 16.5H4.125H23.375Z" />
         </svg>
-        <input type="submit" name="connexion" value="SE CONNECTER">
+        <!-- <input type="submit" name="connexion" value="SE CONNECTER"> -->
+        <p>SE CONNECTER</p>
       </div>
-      </form>
+      <!-- </form> -->
+      </div>
   </nav>
 
 
@@ -142,11 +199,11 @@
       <div class="nos-adhesions" style="grid-column-end: span 2;">
         <!-- TODO ARRANGER CETTE FORMULE -->
         <!-- LES BOUTONS DEPASSENT -->
-        <h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3>
+        <a href="squash.html"><h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3></a>
         <h1 class="btn-orange">&nbsp NOS ADHÉSIONS &nbsp</h1>
         <h3 class="btn-blanc-bleu">&nbsp Planing Réservation &nbsp</h3>
       </div>
-
+      
 
 
     </div>
@@ -171,18 +228,19 @@
           -a PARTIR DE 10€
         </div>
       </div>
-
+      
       <div class="Images">
         <img src="/ressources/images/image_muscu.png" alt="" srcset="">
         <div class="nos-adhesions">
+          <h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3>
           <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
         </div>
       </div>
+      
 
-
-
+      
     </div>
-
+    
     <balise id="Gym"></balise>
     <div class="formule gym">
       <div class="infos">
@@ -203,15 +261,16 @@
           -a PARTIR DE 10€
         </div>
       </div>
-
+      
       <div class="Images">
         <img src="/ressources/images/image_gym.png" alt="" srcset="">
         <div class="nos-adhesions">
+          <h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3>
           <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
         </div>
       </div>
-
-
+      
+      
 
     </div>
   </div>

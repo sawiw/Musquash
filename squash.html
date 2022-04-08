@@ -1,12 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUSQUASH - Squash</title>
-</head>
-<body>
+<html lang="fr-FR">
 
-</body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/reset.css">
+ 
+  <title>Musquash</title>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav>
+    <!-- Logo Musquash -->
+    <a href="index.html" class="logo-musquash-navbar">
+      <img src="./ressources/images/logo_musquash.svg" alt="Logo_Musquash">
+    </a>
+    <button class="btn-profile" id="btnProfile">
+      <img src="/ressources/icons/icone-profile.svg" alt="icone-profile"">
+    </button>
+      <!-- Container bouton ISCRIPTION / CONNEXION  -->
+      <form name=" btnInscription/Connexion" action="" class="nav-btn-container" action="test-button" method="POST">
+      <!-- Bouton s'inscrire -->
+      <div class="btn-inscription">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path
+            d="M17.5 10H5.83333C5.61232 10 5.40036 9.9122 5.24408 9.75592C5.0878 9.59964 5 9.38768 5 9.16667V5.83333C5 5.61232 5.0878 5.40036 5.24408 5.24408C5.40036 5.0878 5.61232 5 5.83333 5H17.5C17.721 5 17.933 5.0878 18.0893 5.24408C18.2455 5.40036 18.3333 5.61232 18.3333 5.83333V9.16667C18.3333 9.38768 18.2455 9.59964 18.0893 9.75592C17.933 9.9122 17.721 10 17.5 10ZM6.66667 8.33333H16.6667V6.61667H6.66667V8.33333Z"
+            fill="#F96244" /><path
+            d="M17.5 11.7334H5.83333C5.61232 11.7334 5.40036 11.8212 5.24408 11.9775C5.0878 12.1338 5 12.3457 5 12.5667V15.8334C5 16.0544 5.0878 16.2664 5.24408 16.4227C5.40036 16.5789 5.61232 16.6667 5.83333 16.6667H15.3L18.3333 13.5834V12.5667C18.3333 12.3457 18.2455 12.1338 18.0893 11.9775C17.933 11.8212 17.721 11.7334 17.5 11.7334ZM16.6667 15.0001H6.66667V13.3334H16.6667V15.0001Z"
+            fill="#F96244" /><path
+            d="M9.21699 26.2584V26.2084L9.48366 25.0501H3.33366V3.33341H20.0003V11.8751L21.667 10.3001V2.50008C21.667 2.27907 21.5792 2.06711 21.4229 1.91083C21.2666 1.75455 21.0547 1.66675 20.8337 1.66675H2.50033C2.27931 1.66675 2.06735 1.75455 1.91107 1.91083C1.75479 2.06711 1.66699 2.27907 1.66699 2.50008V25.8334C1.66699 26.0544 1.75479 26.2664 1.91107 26.4227C2.06735 26.579 2.27931 26.6667 2.50033 26.6667H9.16699C9.17386 26.5296 9.19057 26.3932 9.21699 26.2584Z"
+            fill="#F96244" /><path
+            d="M18.3336 15.9751L17.6836 16.6334C17.8449 16.6002 17.9927 16.5199 18.1083 16.4028C18.224 16.2856 18.3024 16.1368 18.3336 15.9751Z"
+            fill="#F96244" /><path
+            d="M5 22.4499C5 22.6709 5.0878 22.8829 5.24408 23.0392C5.40036 23.1955 5.61232 23.2833 5.83333 23.2833H9.86667L10.1167 22.1999L10.225 21.7416V21.6999H6.66667V19.9999H11.95L13.6167 18.3333H5.83333C5.61232 18.3333 5.40036 18.421 5.24408 18.5773C5.0878 18.7336 5 18.9456 5 19.1666V22.4499Z"
+            fill="#F96244" /><path
+            d="M27.9087 13.8916L25.1003 11.0832C24.9757 10.9583 24.8276 10.8591 24.6646 10.7914C24.5016 10.7238 24.3268 10.689 24.1503 10.689C23.9738 10.689 23.7991 10.7238 23.6361 10.7914C23.473 10.8591 23.325 10.9583 23.2003 11.0832L11.7754 22.5749L10.8337 26.5832C10.7984 26.7562 10.7976 26.9343 10.8314 27.1076C10.8651 27.2808 10.9326 27.4457 11.0302 27.5928C11.1277 27.7398 11.2533 27.8662 11.3998 27.9647C11.5462 28.0632 11.7107 28.1318 11.8837 28.1666C11.9696 28.1752 12.0561 28.1752 12.142 28.1666C12.2441 28.1832 12.3482 28.1832 12.4504 28.1666L16.492 27.2749L27.9087 15.8332C28.0334 15.7093 28.1324 15.5619 28.1999 15.3996C28.2675 15.2373 28.3022 15.0632 28.3022 14.8874C28.3022 14.7116 28.2675 14.5375 28.1999 14.3752C28.1324 14.2128 28.0334 14.0655 27.9087 13.9416V13.8916ZM15.642 25.7582L12.592 26.4332L13.3337 23.4082L21.9003 14.7499L24.2503 17.0999L15.642 25.7582ZM25.192 16.1582L22.842 13.8082L24.167 12.4999L26.5337 14.8666L25.192 16.1582Z"
+            fill="#F96244" />
+        </svg>
+
+        <input type="submit" name="inscription" value="S'INSCRIRE">
+      </div>
+      <!-- Bouton se connecter -->
+      <div class="btn-connexion">
+        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11 22V23.375C11 24.469 11.4346 25.5182 12.2082 26.2918C12.9818 27.0654 14.031 27.5 15.125 27.5H24.75C25.844 27.5 26.8932 27.0654 27.6668 26.2918C28.4404 25.5182 28.875 24.469 28.875 23.375V9.625C28.875 8.53098 28.4404 7.48177 27.6668 6.70818C26.8932 5.9346 25.844 5.5 24.75 5.5H15.125C14.031 5.5 12.9818 5.9346 12.2082 6.70818C11.4346 7.48177 11 8.53098 11 9.625V11M17.875 22L23.375 16.5L17.875 22ZM23.375 16.5L17.875 11L23.375 16.5ZM23.375 16.5H4.125H23.375Z" />
+        </svg>
+        <input type="submit" name="connexion" value="SE CONNECTER">
+      </div>
+      </form>
+  </nav>
+
+  <!--Container intro squash-->
+  <div class="intro-squash">
+    <P id="titre-intro-squash">Squash</P>
+    <div class="t-i-s">
+    <P id="texte-intro-squash2"><H2>Espace climatisé, 6 terrains de squash, cours privés ou collectifs.<br>
+                                    Location ou achat de matériel.</H2></P>
+  </div>
+</div>
+
+ <!--Container infos supl-->
+ 
+ <div class="container-flexbox">
+  <div class="titre-rubrique">
+    <img src="./ressources/icons/M-Logo.svg" class="logo">
+  <p id="titre-planning"><H1>Informations et services.</H1></p>
+  </div>
+ 
+  <div class="squashInfo">
+   <div class="logo-squash">
+     <p id="Cours">Cours</p>
+   </div>
+  
+   
+   <div class="text-info">
+     <P id="titretextinfo"><h2>J'aime mon Musquash !</h2></P>
+     <p id="textinfo">Venez découvrir la passion d'un sport physique et explosif, au sein d'un multiplex moderne et chaleureux.<br>
+                      Musquash vous propose des locations de terrains, des cours privés à votre rythme et votre niveau, avec des 
+                      professeurs de squash professionnels, et des cours de groupes par niveau et âges.<br>
+                      Musquash vous propose aussi des services à la carte, comme la location ou la vente de matériel. </p>
+   </div>
+   </div>
+ </div>
+
+ <div class="container-initiation-flexbox">
+   <a href="#" class="initiation">
+<p id="initiation"><strong>Initiation</strong></p></a>
+   </a>
+   <a href="#" class="initiation">
+    <p id="cours"><strong>Cours</strong></p></a>
+   </a>
+       <a href="#" class="initiation">
+        <p id="reservations"><strong>Réservations</strong></p></a>
+       </a>
+  </div>
+
+  
+
+  <!-- formules-->
+
+  
+  <div class="formules">
+    <div class="titre-rubrique">
+      <img src="./ressources/icons/M-Logo.svg" class="logo">
+    <p id="titre-planning"><H1>Formules/Réservations</H1></p>
+  </div>
+    
+    <div class="fontfor">
+      <div class="tacheTitre">
+        <div class="titreform">
+          <p id="titre-formule"><h1>Cours collectifs :</h1></p>
+            <p id="prixForm"><strong>52 euros</strong></p>
+        </div>
+      </div>
+        <div class="text-fontfor">
+          <p id="formule-a">
+            -Tarif mensuel pour 3 mois minimum.<br>
+            -1 cours collectif par semaine.<br>
+            - "-10% pour souscription de 6 mois !"<br>
+            -tarifs préférentiels pour les services!<br>
+            -Wifi gratuite!<br>
+            -Douches individuelles !
+              <br><br> 
+            <strong>"Connexion button"</strong</p>
+      </div>
+    </div>
+
+    <div class="fontfor">
+      <div class="tacheTitre">
+        <div class="titreform">
+          <p id="titre-formule"><h1>Cours privés :</h1></p>
+          <p id="prixForm">84 euros</p>
+        </div>
+      </div>
+        <div class="text-fontfor">
+          <p id="formule-b">
+            -Tarif mensuel pour 3 mois minimum.<br>
+            -1 cours particulier par semaine.<br>
+            - "-10% pour souscription de 6 mois !"<br>
+            -tarifs préférentiels pour les services!<br>
+            -Wifi gratuite!<br>
+            -Douches individuelles !
+            <br><br> <strong>"Connexion button"</strong></p>
+      </div>
+    </div>
+  <div class="fontfor">
+    <div class="text-fontfor">
+      <p id="reservation-terrain">
+        -Réservation d'une des 6 salles de Squash.<br>
+        -Durée : 1 Heure.<br>
+        -Accés aux services Musquash.<br>
+        -Wifi gratuite.<br>
+        -Douches individuelles.<br>
+        -Tarifs préférentiels pour les membres: -10% !
+        <br><br> <strong>"Connexion button"</strong></p>
+  </div>
+    <div class="tacheTitre">
+      <div class="titreform">
+        <p id="titre-formule"><h1>Réservation terrain:</h1></p>
+          <p id="prixForm">128 euros</p>
+      </div>
+    </div>   
+  </div>
+
+</div>
+
+<!--contenaire service vente/loc -->
+<div class="titre-section">
+  <div class="img-titre">
+    <img src="./ressources/icons/M-Logo.svg" id="logoFormule">
+  </div>
+  <h1>Nos Services</h1>
+</div>
+
+<div class="container-services">
+  <div class="tab-service">
+  <table style="background-image: url(./ressources/images/img-fond-squash.jpg)">
+    <thead>
+      <tr>
+        <th rowspan="2">Article</th>
+        <th colspan="2">Tarifs Non Adhérents</th>
+        <th colspan="2"><p id="fond-jaune">Tarifs Adhérents</p></th>
+      </tr>
+      <tr>
+        <th>location</th>
+        <th>vente</th>
+        <th><p id="fond-jaune">Location</p></th>
+        <th><p id="fond-jaune">Vente</p></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h1>Cardiofréquence mètre</h1><img src="./ressources/images/cardiofrequencemetre.png" alt="cardio frequence metre" srcset=""></td>
+        <td>8€/h <button>Louer</button></td>
+        <td>86,99€ <button>Acheter</button></td>
+        <td><p id="fond-jaune">6€/h <button>Louer</button></p></td>
+        <td><p id="fond-jaune">77,49€ <button>Acheter</button></p></td>
+      </tr>
+      <tr>
+        <td><h1>Serviettes de sport</h1><img src="./ressources/images/serviettes.png" alt="serviettes" srcset=""></td>
+        <td>3€/h <button>Louer</button></td>
+        <td>15€ <button>Acheter</button></td>
+        <td><p id="fond-jaune">2€/h <button>Louer</button></p></td>
+        <td><p id="fond-jaune">15€/h <button>Acheter</button></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<!--planning-->
+
+<div class="container-semaine-flexbox">
+    
+
+  <div class="semaine">
+    <div class="titre-rubrique">
+      <img src="./ressources/icons/M-Logo.svg" class="logo">
+    <p id="titre-planning"><H1>Réservations planning</H1></p>
+  </div>
+    <img src="./ressources/images/planning-semaine-de-travail.png" alt="planning réservation musquash" class="imgsemaine">
+  </div>
+  </div>
+
+<!--Footer-->
+
+<div class="footer">
+  <div class="text-footer"> Musquash_2022 tous droits réservés. Espace Multi Sports Musquash: 1115 rue Hélene Boucher, 34130 Mauguio. 
+                       Tel: 04 67 83 17 96. CNAM ingineering by Sami, Erwan et Nico.  <a href="#">Plan du site</a></p>
+
+</div>
+</div>

@@ -7,8 +7,8 @@
   --orange: #f96244;
 }
 
-.display-none {
-  display: none;
+.cachee {
+  display: none !important;
 }
 
 .display-block {
@@ -72,13 +72,44 @@
 * BODY
 */
 body {
-  background-color: #fafaff;
+  background-color: #e7e7ff;
   font-family: "Lexend", sans-serif;
 }
 
 /*
 * INSCRIPTION / CONNNEXION
 */
+.testPopUp {
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7019607843);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testPopUp h2 > button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.testPopUp form {
+  padding: 2em;
+  border-radius: 50px;
+  background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
+  display: grid;
+  gap: 10px;
+}
+.testPopUp form div {
+  width: 8rem;
+}
+.testPopUp form #validerInscription {
+  color: #f96244;
+}
+
 nav {
   margin: 2em;
   display: flex;
@@ -189,6 +220,7 @@ nav .btn-profile {
 .hero-container .presentation h1 {
   color: #f96244;
   font-size: 3vw;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 .hero-container .presentation p {
   color: #fafaff;
