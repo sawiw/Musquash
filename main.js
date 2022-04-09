@@ -1,8 +1,3 @@
-btnProfile = document.getElementById('btnProfile');
-btnProfile.onclick = function () {
-    alert('OK')
-};
-
 formInscription = document.getElementById("testPopUpInscription");
 
 btnInscription = document.getElementById("btnInscription");
@@ -37,19 +32,3 @@ btnConnexion = document.getElementById("btnConnexion");
 btnConnexion.addEventListener('click', function () {
     formConnexion.classList.toggle("cachee");
 });
-
-
-testPopUpInscription = document.getElementById("testPopUpInscription");
-fermePopupInscription = document.getElementById("fermePopupInscription");
-
-fermePopupInscription.onclick = function () {
-    testPopUpInscription.classList.toggle("cachee");
-}
-
-
-testPopUpConnexion = document.getElementById("testPopUpConnexion");
-fermePopUpConnexion = document.getElementById("fermePopUpConnexion");
-
-fermePopUpConnexion.onclick = function () {
-    testPopUpConnexion.classList.toggle("cachee");
-}
