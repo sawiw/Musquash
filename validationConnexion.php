@@ -33,11 +33,11 @@ try{
             $_SESSION['mail'] = $mdp['mail_authentification'];
             $_SESSION['valide'] = $mdp['valide_authentification'];
             
-            header('Location: /musquash/index.php');  
+            header('Location: index.php');  
         }
         else{
             //redirection à l'accueil
-            header('Location: /musquash/index.php');  
+            header('Location: index.php');  
             // echo("<script>alert('Mot de passe ou login erronné')</script>");    
             // echo 'Mot de passe ou login erronné';
         }
@@ -45,7 +45,7 @@ try{
     }
     else{
         //redirection à l'accueil
-        header('Location: /musquash/index.php');
+        header('Location: index.php');
         //echo("<script>alert('Mot de passe ou login erronné')</script>");    
         // echo 'Mot de passe ou login erronné';
     }

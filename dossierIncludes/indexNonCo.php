@@ -15,22 +15,22 @@
 <body>
   <!-- AJOUT INSCRIPTION MOD ERWANN -->
   <div id="testPopUpInscription" class="cachee testPopUp">
-    <form  action="/musquash/validationInscription.php" method="POST"> 
+    <form  action="validationInscription.php" method="POST">
       <!-- onsubmit="return validationInscription()" -->
       <h2>Formulaire d'inscription &nbsp;<button id="fermePopupInscription">❌</button></h2>
-      
-      
+
+
       <label for="login">Login : </label>
       <input required type="text" maxlength="20" name="login" id="login">
-      
+
       <label for="nom">Nom : </label>
       <input type="text" name="nom" id="nom" maxlength="30" required>
       <label for="prenom">Prenom : </label>
       <input type="text" name="prenom" id="prenom" maxlength="30" required>
-      
+
       <label for="dateNaissance">Date de naissance : </label>
       <input required type="date" name="dateNaissance" id="dateNaissance">
-      
+
       <label for="mail">Mail : </label>
       <input type="email" name="mail" id="mail" maxlength="30" required>
       <br>
@@ -40,30 +40,30 @@
         <img src="ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
       </div>
     </form>
-      
+
     </div>
-  
+
     <!-- AJOUT CONNEXION MOD ERWANN -->
     <div id="testPopUpConnexion" class="cachee testPopUp">
-      <form  action="/musquash/validationConnexion.php" method="POST">
+      <form  action="validationConnexion.php" method="POST">
         <h2>Connexion <button id="fermePopUpConnexion">❌</button></h2>
-        
-      
+
+
       <label for="mailConnexion">Mail utilisateur: </label>
       <input required type="text" maxlength="30" name="mailConnexion" id="mailConnexion">
-      
-      
+
+
       <label for="mdpConnexion">Mot de passe : </label>
       <input required type="password" minlength="8" maxlength="50" name="mdpConnexion" id="mdpConnexion">
-      
-      
+
+
       <input type="submit" value="Se connecter" id="validerConnexion">
       <br>
       <div>
         <img src="ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
       </div>
     </form>
-      
+
     </div>
   <!-- Navbar -->
   <nav>
@@ -203,7 +203,7 @@
         <h1 class="btn-orange">&nbsp NOS ADHÉSIONS &nbsp</h1>
         <a href="#reservation"><h3 class="btn-blanc-bleu">&nbsp Planing Réservation &nbsp</h3></a>
       </div>
-      
+
 
 
     </div>
@@ -228,18 +228,18 @@
           -a PARTIR DE 10€
         </div>
       </div>
-      
+
       <div class="Images">
         <img src="ressources\images\image_muscu.png" alt="image cours muscu">
         <div class="nos-adhesions">
           <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
         </div>
       </div>
-      
 
-      
+
+
     </div>
-    
+
     <balise id="Gym"></balise>
     <div class="formule gym">
       <div class="infos">
@@ -263,7 +263,7 @@
           -a PARTIR DE 10€
         </div>
       </div>
-      
+
       <div class="Images">
         <img src="ressources/images/image_gym.png" alt="image cours de gym" srcset="">
         <div class="nos-adhesions">
@@ -271,8 +271,8 @@
           <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
         </div>
       </div>
-      
-      
+
+
 
     </div>
   </div>

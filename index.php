@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<?php 
+<?php
     if(array_key_exists('login', $_SESSION)){
         echo 'Connecté en tant que : ' . $_SESSION['login'] ;
         include('dossierIncludes\indexCo.php');

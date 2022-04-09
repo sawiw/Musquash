@@ -46,14 +46,14 @@
 }
 
 .btn-blanc-bleu {
-  background: #fafaff;
+  cursor: pointer;
+  background: #1f2eec;
   border: 3px solid #1f2eec;
-  color: #1f2eec;
+  color: #fafaff;
   border-radius: 50px;
 }
 .btn-blanc-bleu:hover {
-  background: #1f2eec;
-  border: 3px solid transparent;
+  background: transparent;
   color: #fafaff;
 }
 
@@ -108,7 +108,11 @@ body {
   width: 8rem;
 }
 .testPopUp form #validerInscription {
+  cursor: pointer;
   color: #f96244;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #f96244;
 }
 
 nav {
@@ -211,6 +215,7 @@ nav .btn-profile {
   * HERO + OFFRE PROMOS
   */
 .hero-container {
+  max-height: 55vh;
   -o-object-fit: contain;
      object-fit: contain;
   display: grid;
@@ -235,9 +240,6 @@ nav .btn-profile {
   font-size: 2vw;
 }
 .hero-container .offre-promos {
-  position: inherit;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
   color: #fafaff;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
@@ -313,7 +315,7 @@ nav .btn-profile {
   text-decoration: none;
 }
 .container-formules .formule {
-  background-color: #1f2eec;
+  background-color: #5965ff;
   border-radius: 50px;
   width: 95%;
   display: grid;
@@ -365,7 +367,7 @@ nav .btn-profile {
     grid-template-rows: 1fr 1fr;
   }
   .hero-container .presentation h1 {
-    font-size: 100%;
+    font-size: 4vw;
   }
   .hero-container .presentation p {
     font-size: 3vw;

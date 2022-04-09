@@ -10,8 +10,8 @@ const LOGIN = 'root';
 const MDP = '';
 
 //se connecter à la BDD
-function getBddConnexion(){  
-    
+function getBddConnexion(){
+
 
     $dsn = 'mysql:host=' . HOST . ';port=' . PORT . ';dbname=' . DBNAME .';charset=' . CHARSET;
 

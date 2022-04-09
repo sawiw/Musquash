@@ -45,13 +45,14 @@ $orange: #f96244;
   }
 }
 .btn-blanc-bleu {
-  background: $blanc;
+  cursor: pointer;
+  background: $bleu;
   border: 3px solid $bleu;
-  color: $bleu;
+  color: $blanc;
   border-radius: 50px;
   &:hover {
-    background: $bleu;
-    border: 3px solid transparent;
+    background: transparent;
+    // border: 3px solid transparent;
     color: $blanc;
   }
 }
@@ -101,7 +102,13 @@ body {
     justify-items: center;
     gap: 10px;
     div {width: 8rem;}
-    #validerInscription {color:$orange;}
+    #validerInscription {
+      cursor: pointer;
+      color:$orange;
+      font-size:1.2rem;
+      border-radius: 10px;
+      border: 1px solid $orange;
+    }
   }
 }
 
@@ -201,7 +208,7 @@ nav {
   * HERO + OFFRE PROMOS
   */
 .hero-container {
-  // max-height: 55vh;
+  max-height: 55vh;
   object-fit: contain;
   display: grid;
   grid-template-columns: 80% auto;
@@ -225,9 +232,6 @@ nav {
     }
   }
   .offre-promos {
-    position: inherit;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
     color: $blanc;
     max-height: fit-content;
     object-fit: contain;
@@ -313,7 +317,7 @@ nav {
   a {text-decoration: none;}
 
   .formule {
-    background-color: $bleu;
+    background-color: #5965ff;
     border-radius: 50px;
     width: 95%;
     display: grid;
@@ -369,7 +373,7 @@ nav {
     grid-template-rows: 1fr 1fr;
     .presentation {
       h1 {
-        font-size: 100%;
+        font-size: 4vw;
       }
       p {
         font-size: 3vw;

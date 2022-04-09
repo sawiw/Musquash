@@ -25,8 +25,6 @@ function validationInscription() {
         alert("Saisissez le mot de passe provisoire !");
         return false;
     }
-    
-
 }
 
 
