@@ -92,14 +92,14 @@ body {
   form {
     padding:2em;
     border-radius: 50px;
-    
+
     background: linear-gradient(
         117.36deg,
         rgba(31, 46, 236, 0.8) 0%,
         rgba(31, 46, 236, 0.464) 100%
       );
     display: grid;
-    justify-items: center
+    justify-items: center;
     gap: 10px;
     div {width: 8rem;}
     #validerInscription {color:$orange;}
@@ -119,7 +119,7 @@ nav {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-
+    p {padding-left:  0.5em;}
     form {
       height: fit-content;
     }
@@ -145,12 +145,13 @@ nav {
       }
     }
     .btn-connexion {
+      display:flex;
+      align-items: center;
+      padding:0 1em;
       background: $bleu;
       border: solid transparent;
-      input {
-        cursor: pointer;
-        color: $blanc;
-      }
+      cursor: pointer;
+      color: $blanc;
       svg {
         stroke: $blanc;
         stroke-width: 2.5;
@@ -161,9 +162,7 @@ nav {
     .btn-connexion:hover {
       background: transparent;
       border: solid $bleu;
-      input {
-        color: $bleu;
-      }
+      color: $bleu;
       svg {
         stroke: $bleu;
       }
@@ -171,8 +170,10 @@ nav {
     .btn-inscription {
       display: flex;
       align-items: center;
-      background: $blanc;
+      background: transparent;
       border: solid $orange;
+      color: #f96244;
+      padding-right: 1em;
       input {
         cursor: pointer;
         color: $orange;
@@ -184,6 +185,7 @@ nav {
     .btn-inscription:hover {
       background: $orange;
       border: solid transparent;
+      color: $blanc;
       input {
         color: $blanc;
       }
@@ -375,11 +377,11 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    
+
   }
 }
 @media screen and (max-width: 900px) {
-  
+
 }
 @media screen and (max-width: 400px) {
   nav {

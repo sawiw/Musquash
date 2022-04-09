@@ -101,6 +101,7 @@ body {
   border-radius: 50px;
   background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
   display: grid;
+  justify-items: center;
   gap: 10px;
 }
 .testPopUp form div {
@@ -124,6 +125,9 @@ nav .nav-btn-container {
   display: flex;
   gap: 20px;
   justify-content: space-between;
+}
+nav .nav-btn-container p {
+  padding-left: 0.5em;
 }
 nav .nav-btn-container form {
   height: -webkit-fit-content;
@@ -149,10 +153,11 @@ nav .nav-btn-container div input {
   margin-right: 1em;
 }
 nav .nav-btn-container .btn-connexion {
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
   background: #1f2eec;
   border: solid transparent;
-}
-nav .nav-btn-container .btn-connexion input {
   cursor: pointer;
   color: #fafaff;
 }
@@ -165,8 +170,6 @@ nav .nav-btn-container .btn-connexion svg {
 nav .nav-btn-container .btn-connexion:hover {
   background: transparent;
   border: solid #1f2eec;
-}
-nav .nav-btn-container .btn-connexion:hover input {
   color: #1f2eec;
 }
 nav .nav-btn-container .btn-connexion:hover svg {
@@ -175,8 +178,10 @@ nav .nav-btn-container .btn-connexion:hover svg {
 nav .nav-btn-container .btn-inscription {
   display: flex;
   align-items: center;
-  background: #fafaff;
+  background: transparent;
   border: solid #f96244;
+  color: #f96244;
+  padding-right: 1em;
 }
 nav .nav-btn-container .btn-inscription input {
   cursor: pointer;
@@ -188,6 +193,7 @@ nav .nav-btn-container .btn-inscription svg {
 nav .nav-btn-container .btn-inscription:hover {
   background: #f96244;
   border: solid transparent;
+  color: #fafaff;
 }
 nav .nav-btn-container .btn-inscription:hover input {
   color: #fafaff;
