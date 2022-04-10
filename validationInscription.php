@@ -47,7 +47,7 @@ $nb_login = $row['nb_login'];
 if($nb_login > 0){
     echo '<p>Le login "'. $_POST['login'] .'" existe déjà !</p>
     <br><br>
-    <form action="/musquash/index.php" method="post">
+    <form action="index.php" method="post">
         <input type="submit" value="Retour à l\'accueil">
     </form>';
 }
@@ -67,7 +67,7 @@ else{
     if($nb_mail > 0){
         echo '<p>Le mail "'. $_POST['mail'] .'" possède déjà un compte chez Musquash</p>
         <br><br>
-        <form action="/musquash/index.php" method="post">
+        <form action="index.php" method="post">
             <input type="submit" value="Retour à l\'accueil">
         </form>';
     }
@@ -154,7 +154,7 @@ else{
 
                 $mail->send();
                 echo 'Un mail vous a été envoyé sur ' . $_POST['mail'] . '<br>Pensez à vous connecter et changer votre mot de passe pour valider votre compte<br>
-                <form action="/musquash/index.php" method="post">
+                <form action="index.php" method="post">
                     <input type="submit" value="Retour à l\'accueil">
                 </form>';
             } catch (Exception $e) {
@@ -164,7 +164,7 @@ else{
             // // En attendant le mail
             // echo '<p>Félicitations '. $_POST['login'] .', voici votre mot de passe :'. $motDePasse .'</p><br><p>(Celui-ci est modifiable dans votre espace personnel)</p>
             // <br><br>
-            // <form action="/musquash/index.php" method="post">
+            // <form action="index.php" method="post">
             //     <input type="submit" value="Retour à l\'accueil">
             // </form>';
 
