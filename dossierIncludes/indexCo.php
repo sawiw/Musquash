@@ -13,7 +13,7 @@
   <title>Musquash</title>
 </head>
 <body>
-
+  CONNECTé
   <!-- Navbar -->
   <nav>
     <!-- Logo Musquash -->

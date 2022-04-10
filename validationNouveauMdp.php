@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('./sql/bddConnexion.php');
+require('sql/bddConnexion.php');
 $updateMdp = 'UPDATE authentification
 SET mdp_authentification =:mdp, valide_authentification = true
 WHERE id_utilisateur =:id;';
@@ -24,7 +24,7 @@ try{
     $_SESSION['valide'] = $valid['valide_authentification'];
 
 
-    header('Location: /musquash/compteUtilisateur.php');
+    header('Location: compteUtilisateur.php');
 }
 
 catch(PDOException $err){

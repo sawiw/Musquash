@@ -90,6 +90,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1em;
 }
 .testPopUp h2 > button {
   background: transparent;
@@ -403,6 +404,12 @@ nav .btn-profile {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     transform: scale(0.9);
+  }
+
+  body .container-formules .formule .nos-adhesions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 610px) {

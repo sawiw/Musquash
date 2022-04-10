@@ -11,6 +11,7 @@ echo'<h2>Bienvenue sur votre espace personnel Musquash '.$_SESSION['login'].'.</
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    link
     <title>Espace personnel</title>
 </head>
 <body>
@@ -18,12 +19,12 @@ echo'<h2>Bienvenue sur votre espace personnel Musquash '.$_SESSION['login'].'.</
 <?php
 if($_SESSION['valide'] == 0){
 echo'<br>
-<form action="/musquash/index.php" method="post">
+<form action="index.php" method="post">
     <input type="submit" value="Retour à l\'accueil">
 </form>
 <h2>Changez votre mot de passe pour valider votre compte</h2>
 <br>
-<form action="/musquash/validationNouveauMdp.php" method="post" onsubmit="return validationNouveauMdp()">
+<form action="validationNouveauMdp.php" method="post" onsubmit="return validationNouveauMdp()">
 <label for="mdpProvisoire">Entrez votre mot de passe provisoire: </label>
 <input required type="password" minlength="8" maxlength="50" name="mdpProvisoire" id="mdpProvisoire"><br><br>
 <label for="modifMdp1">Votre nouveau mot de passe : </label>
@@ -35,7 +36,7 @@ echo'<br>
 </form>';
 }
 else{
-    echo'<h2>Compte validé<h2><br><form action="/musquash/index.php" method="post">
+    echo'<h2>Compte validé<h2><br><form action="index.php" method="post">
     <input type="submit" value="Retour à l\'accueil">
 </form>';
 }

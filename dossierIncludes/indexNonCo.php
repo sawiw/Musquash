@@ -37,7 +37,7 @@
       <input type="submit" value="S'inscrire" id="validerInscription">
       <br>
       <div>
-        <img src="ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
+        <img src="/ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
       </div>
     </form>
 
@@ -60,7 +60,7 @@
       <input type="submit" value="Se connecter" id="validerConnexion">
       <br>
       <div>
-        <img src="ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
+        <img src="/ressources/images/logo_musquash.svg" alt="logo_musquash" style="filter: brightness(100);" >
       </div>
     </form>
 
@@ -68,11 +68,11 @@
   <!-- Navbar -->
   <nav>
     <!-- Logo Musquash -->
-    <a href="index.html" class="logo-musquash-navbar">
-      <img src="./ressources/images/logo_musquash.svg" alt="Logo_Musquash">
+    <a href="index.php" class="logo-musquash-navbar">
+      <img src="/ressources/images/logo_musquash.svg" alt="Logo_Musquash">
     </a>
     <button class="btn-profile" id="btnProfile">
-      <img src="./ressources/icons/icone-profile.svg" alt="icone-profile">
+      <img src="/ressources/icons/icone-profile.svg" alt="icone-profile">
     </button>
       <!-- Container bouton ISCRIPTION / CONNEXION  -->
       <!-- ENLEVE PAR ERWANN -->
@@ -147,24 +147,24 @@
 
       <a class="nav bleu gauche" href="#Muscu" id="heroMuscu">
         <h1>MUSCU</h1>
-        <img src="./ressources/illustrations/muscu.svg" class="illu-hero">
+        <img src="/ressources/illustrations/muscu.svg" class="illu-hero">
       </a>
 
       <a href="#Squash" class="nav orange" id="heroSquash">
         <h1>SQUASH</h1>
-        <img src="./ressources/illustrations/squash.svg" class="illu-hero">
+        <img src="/ressources/illustrations/squash.svg" class="illu-hero">
       </a>
 
       <a href="#Gym" class="nav bleu droite" id="heroGym">
         <h1>GYM</h1>
-        <img src="./ressources/illustrations/gym.svg" class="illu-hero">
+        <img src="/ressources/illustrations/gym.svg" class="illu-hero">
       </a>
   </div>
 
 
   <div class="titre-section">
     <div class="img-titre">
-      <img src="./ressources/icons/M-Logo.svg" id="logoFormule">
+      <img src="/ressources/icons/M-Logo.svg" id="logoFormule">
     </div>
     <h1>Nos formules</h1>
   </div>
@@ -176,7 +176,7 @@
     <div class="formule squash">
       <div class="infos">
         <div class="titre">
-          <img src="./ressources/icons/icon-squash.svg" alt="">
+          <img src="/ressources/icons/icon-squash.svg" alt="">
           <h1>Squash</h1>
         </div>
         <div class="text">
@@ -194,7 +194,7 @@
       </div>
 
       <div class="images">
-        <img src="ressources/images/image_squash.png" alt="image de courts de squash">
+        <img src="/ressources/images/image_squash.png" alt="image de courts de squash">
       </div>
       <div class="nos-adhesions" style="grid-column-end: span 2;">
         <!-- TODO ARRANGER CETTE FORMULE -->
@@ -212,7 +212,7 @@
     <div class="formule muscu">
       <div class="infos">
         <div class="titre">
-          <img src="./ressources/icons/icon-muscu.svg" alt="icone muscu">
+          <img src="/ressources/icons/icon-muscu.svg" alt="icone muscu">
           <h1>Musculation</h1>
         </div>
         <div class="text">
@@ -230,7 +230,7 @@
       </div>
 
       <div class="Images">
-        <img src="ressources\images\image_muscu.png" alt="image cours muscu">
+        <img src="/ressources\images\image_muscu.png" alt="image cours muscu">
         <div class="nos-adhesions">
           <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
         </div>
@@ -244,7 +244,7 @@
     <div class="formule gym">
       <div class="infos">
         <div class="titre">
-          <img src="ressources/icons/icon-gym.svg" alt="">
+          <img src="/ressources/icons/icon-gym.svg" alt="">
           <h1>Gym</h1>
         </div>
         <br>
@@ -265,7 +265,7 @@
       </div>
 
       <div class="Images">
-        <img src="ressources/images/image_gym.png" alt="image cours de gym" srcset="">
+        <img src="/ressources/images/image_gym.png" alt="image cours de gym" srcset="">
         <div class="nos-adhesions">
           <h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3>
           <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
@@ -280,7 +280,7 @@
   <!--contenaire service vente/loc -->
   <div class="titre-section">
     <div class="img-titre">
-      <img src="./ressources/icons/M-Logo.svg" id="logoFormule" alt="lo">
+      <img src="/ressources/icons/M-Logo.svg" id="logoFormule" alt="lo">
     </div>
     <h1>Nos Services</h1>
   </div>
