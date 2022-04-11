@@ -21,16 +21,22 @@ h1 {
 .container-planning table {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  height: 100%;
 }
-.container-planning table .cours-adulte-debutant {
+
+.cours-adulte-debutant {
   background-color: yellow;
 }
-.container-planning table .cours-enfants-grp1 {
+
+.cours-enfants-grp1 {
   background-color: rgb(82, 140, 255);
 }
-.container-planning table .terrain-libre {
+
+.terrain-libre {
   background-color: rgba(0, 255, 0, 0.389);
 }
-.container-planning table .ferme {
+
+.ferme {
   background-color: rgba(255, 0, 0, 0.408);
 }/*# sourceMappingURL=planning.css.map */
