@@ -3,6 +3,16 @@ session_start();
 // require('./sql/bddConnexion.php');
 require('fonctions\fonctionPlanning.php');
 //require('fonctions\testAjax.js');
+
+if(array_key_exists('login', $_SESSION)){
+    echo 'Connecté en tant que : ' . $_SESSION['login'] ;
+    include('dossierIncludes\barreNavCo.php');
+}
+else{
+    echo 'Non connecté
+    ';
+    include('dossierIncludes\barreNavNonCo.php');
+}
 $semaine = new DateTime();
 $semaine = intval($semaine->format('W'));
 

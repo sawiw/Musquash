@@ -116,6 +116,11 @@ body {
   border: 1px solid #f96244;
 }
 
+#btnDeconnexion {
+  color: white;
+  cursor: pointer;
+}
+
 nav {
   margin: 2em;
   display: flex;
@@ -406,7 +411,7 @@ nav .btn-profile {
     transform: scale(0.9);
   }
 
-  body .container-formules .formule .nos-adhesions {
+  .container-formules .formule .nos-adhesions {
     display: flex;
     flex-direction: column;
     gap: 10px;
