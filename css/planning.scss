@@ -2,11 +2,38 @@ h1 {
     display: flex;
     justify-content: center;
 }
-table {
+.container-planning {
+    width: 80%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    th{
-        // display: flex;
-        // width: 100%;
+
+    .planning-nav {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        // justify-content: space-around;
+        // align-items: center;
+        border: solid;
+        padding:1em 0; 
+        form {
+            margin: 0;
+        }
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        .cours-adulte-debutant {
+            background-color: yellow;
+        }
+        .cours-enfants-grp1 {
+            background-color:rgb(82, 140, 255);
+        }
+        .terrain-libre {
+            background-color: rgba(0, 255, 0, 0.389);
+        }
+        .ferme {
+            background-color:rgba(255, 0, 0, 0.408);
+        }
     }
 }

@@ -114,7 +114,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
             ]);
             }
             //Début du tableau
-            $resultat.='
+            $resultat.= '
             <!DOCTYPE html>
             <html lang="fr-FR">
             <head>
@@ -139,40 +139,64 @@ function planning(int $terrain, int $semaine, int $annee): string{
                 border-width: 1px;
                 }
             </style>
-            
+            <div class="container-planning">
             <h1>PLANNING MUSQUASH 2022</h1>
                 <br>
+            <div class="planning-nav"> 
+                <form action="planning.php" method="GET">
+                        <input type="hidden" name="semaine" value="' . $semainePrecedente . '">
+                        <input type="submit" name="test" value="Semaine n°' . $semainePrecedente . '">
+                    </form>
+                    &nbsp;&nbsp;SEMAINE N°' . $semaine . ' (du ' . $debutEtFin['debutSemaine'] . ' au ' . $debutEtFin['finSemaine'] . ')&nbsp;&nbsp;
+                <form action="planning.php" method="GET">
+                    <input type="hidden" name="semaine" value="' . $semaineSuivante . '">
+                    <input type="submit" name="test" value="Semaine n°' . $semaineSuivante . '">
+                </form>
+            </div>
+            <div class="planning-nav"> 
+                <form action="planning.php" method="GET">
+                    <input type="hidden" name="semaine" value="'.$semaine.'">
+                    <input type="hidden" name="terrain" value="'.$terrainPrecedent.'">
+                    <input type="submit" name="test" value="Terrain n°'.$terrainPrecedent.'">
+                </form>
+                &nbsp;&nbsp;TERRAIN N°'.$terrain.'&nbsp;&nbsp;
+                <form action="planning.php" method="GET">
+                    <input type="hidden" name="semaine" value="'.$semaine.'">
+                    <input type="hidden" name="terrain" value="'.$terrainSuivant.'">
+                    <input type="submit" name="test" value="Terrain n°'.$terrainSuivant.'">
+                </form>
+            </div>
                 <table>
                     <thead>
                         <tr>
 
                             <th style="border: solid black 3px;"colspan="4">
                             
-                                <form action="planning.php" method="GET">
-                                    <input type="hidden" name="semaine" value="'.$semainePrecedente.'">
-                                    <input type="submit" name="test" value="Semaine n°'.$semainePrecedente.'">
-                                </form>
-                                &nbsp;&nbsp;SEMAINE N°'.$semaine.' (du '.$debutEtFin['debutSemaine'].' au '.$debutEtFin['finSemaine'].')&nbsp;&nbsp;
-                                <form action="planning.php" method="GET">
-                                    <input type="hidden" name="semaine" value="'.$semaineSuivante.'">
-                                    <input type="submit" name="test" value="Semaine n°'.$semaineSuivante.'">
-                                </form>
+                                // <form action="planning.php" method="GET">
+                                //     <input type="hidden" name="semaine" value="'.$semainePrecedente.'">
+                                //     <input type="submit" name="test" value="Semaine n°'.$semainePrecedente.'">
+                                // </form>
+                                // &nbsp;&nbsp;SEMAINE N°'.$semaine.' (du '.$debutEtFin['debutSemaine'].' au '.$debutEtFin['finSemaine'].')&nbsp;&nbsp;
+                                // <form action="planning.php" method="GET">
+                                //     <input type="hidden" name="semaine" value="'.$semaineSuivante.'">
+                                //     <input type="submit" name="test" value="Semaine n°'.$semaineSuivante.'">
+                                // </form>
 
                             </th>
 
                             <th style="border: solid black 3px;"colspan="4">
 
-                            <form action="planning.php" method="GET">
-                                <input type="hidden" name="semaine" value="'.$semaine.'">
-                                <input type="hidden" name="terrain" value="'.$terrainPrecedent.'">
-                                <input type="submit" name="test" value="Terrain n°'.$terrainPrecedent.'">
-                            </form>
-                            &nbsp;&nbsp;TERRAIN N°'.$terrain.'&nbsp;&nbsp;
-                            <form action="planning.php" method="GET">
-                                <input type="hidden" name="semaine" value="'.$semaine.'">
-                                <input type="hidden" name="terrain" value="'.$terrainSuivant.'">
-                                <input type="submit" name="test" value="Terrain n°'.$terrainSuivant.'">
-                            </form>
+                            // <form action="planning.php" method="GET">
+                            //     <input type="hidden" name="semaine" value="'.$semaine.'">
+                            //     <input type="hidden" name="terrain" value="'.$terrainPrecedent.'">
+                            //     <input type="submit" name="test" value="Terrain n°'.$terrainPrecedent.'">
+                            // </form>
+                            // &nbsp;&nbsp;TERRAIN N°'.$terrain.'&nbsp;&nbsp;
+                            // <form action="planning.php" method="GET">
+                            //     <input type="hidden" name="semaine" value="'.$semaine.'">
+                            //     <input type="hidden" name="terrain" value="'.$terrainSuivant.'">
+                            //     <input type="submit" name="test" value="Terrain n°'.$terrainSuivant.'">
+                            // </form>
 
                             </th>
 
@@ -207,7 +231,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         $heurePrecedente = -1;
                     }
                     if($y==6){
-                        $resultat.='<td>FERME</td>';
+                        $resultat.='<td class="ferme">FERME</td>';
                         break;
                     }
                     
@@ -218,26 +242,26 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         {
                             //si cours adulte et places restantes
                             if(($coursSeul[0] == "Cours adulte débutant" || $coursSeul[0] == "Cours adulte confirmé" || $coursSeul[0] == "Cours adulte expert") && $coursSeul[2] > 0){
-                                $resultat.='<td rowspan="2" style="background-color: yellow;">'.$coursSeul[0].'<br>Places restantes : '.$coursSeul[2].'<br><button>S\'inscrire</button></td>';
+                                $resultat.='<td rowspan="2" class="cours-adulte-debutant">'.$coursSeul[0].'<br>Places restantes : '.$coursSeul[2].'<br><button>S\'inscrire</button></td>';
                                 //Rajouter l'heure précedente pour sauter une case
                                 $heurePrecedente = $i+1;
                                 $check=true;
                             }
                             //si cours adulte sans places restantes
                             elseif(($coursSeul[0] == "Cours adulte débutant" || $coursSeul[0] == "Cours adulte confirmé" || $coursSeul[0] == "Cours adulte expert") && $coursSeul[2] <= 0){
-                                $resultat.='<td rowspan="2" style="background-color: grey;">'.$coursSeul[0].'<br>Cours complet</td>';
+                                $resultat.='<td rowspan="2" class="cours-complet">'.$coursSeul[0].'<br>Cours complet</td>';
                                 //Rajouter l'heure précedente pour sauter une case
                                 $heurePrecedente = $i+1;
                                 $check=true;
                             }
                             //si cours enfant avec place
                             elseif(($coursSeul[0] == "Cours enfants Groupe 1" || $coursSeul[0] == "Cours enfants Groupe 2" || $coursSeul[0] == "Cours enfants Groupe 3") && $coursSeul[2] > 0){
-                                $resultat.='<td style="background-color: green;">'.$coursSeul[0].'<br>Places restantes : '.$coursSeul[2].'<br><button>S\'inscrire</button></td>';
+                                $resultat.='<td class="cours-enfants-grp1">'.$coursSeul[0].'<br>Places restantes : '.$coursSeul[2].'<br><button>S\'inscrire</button></td>';
                                 $check=true;
                             }
                             //si cours enfant sans places
                             else{
-                                $resultat.='<td style="background-color: grey;">'.$coursSeul[0].'<br>Cours complet</td>';
+                                $resultat.='<td class="cours-complet">'.$coursSeul[0].'<br>Cours complet</td>';
                                 $check=true;
                             }
                         }
@@ -247,7 +271,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         $check = false;
                     }
                     else{
-                        $resultat.='<td >Terrain libre <br><br><button>Reserver</button></td> ';
+                        $resultat.='<td class="terrain-libre">Terrain libre <br><br><button>Reserver</button></td> ';
 
                     }
                 
@@ -255,7 +279,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                 $resultat.='</tr>';
                 
             }
-            $resultat.='</tbody></table>';
+            $resultat.='</tbody></table></div>';
             // print_r($cours);
             return $resultat;
         }
@@ -303,6 +327,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
             <link rel="stylesheet" href="css/planning.css">
             <title>Musquash - Planning</title>
             </head>
+            
             <style>
                 table {
                 border-collapse: collapse;
@@ -321,7 +346,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                     <thead>
                         <tr>
 
-                        <th style="border: solid black 3px;"colspan="4">
+                        <th style="border: solid black 3px;"colspan="8">
                             
                         <form action="planning.php" method="GET">
                             <input type="hidden" name="semaine" value="'.$semainePrecedente.'">
@@ -334,8 +359,8 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         </form>
 
                     </th>
-
-                    <th style="border: solid black 3px;"colspan="4">
+                    <tr>
+                    <th style="border: solid black 3px;"colspan="8">
 
                     <form action="planning.php" method="GET">
                         <input type="hidden" name="semaine" value="'.$semaine.'">
@@ -351,7 +376,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
 
                     </th>
 
-                        </tr>
+                    </tr>
                         <tr>
                             <th>
                                 Heure / Jour
@@ -373,11 +398,11 @@ function planning(int $terrain, int $semaine, int $annee): string{
                             $resultat.='<td>'.$i.'h - '.($i+1).'h</td>';
                         }
                         if($j==6){
-                            $resultat.='<td>FERME</td>';
+                            $resultat.='<td class="ferme">FERME</td>';
                             break;
                         }
                         else{
-                            $resultat.='<td >Terrain libre <br><br><button>Reserver</button></td> ';
+                            $resultat.='<td class="terrain-libre">Terrain libre <br><br><button>Reserver</button></td> ';
     
                         }
                     }
