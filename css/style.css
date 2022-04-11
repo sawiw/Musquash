@@ -489,6 +489,9 @@ footer .footer-logo {
   .hero-container .presentation h1 {
     font-size: 7vw;
   }
+  .hero-container .presentation p {
+    font-size: 4vw;
+  }
   .hero-container .offre-promos {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
