@@ -3,7 +3,7 @@
 <a href="index.php" class="logo-musquash-navbar">
   <img src="ressources/images/logo_musquash.svg" alt="Logo_Musquash">
 </a>
-<button class="btn-profile">
+<button class="btn-profile" id="btnProfile">
   <img src="ressources/icons/icone-profile.svg" alt="icone-profile">
 </button>
 

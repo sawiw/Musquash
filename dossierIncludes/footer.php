@@ -1,6 +1,8 @@
 <footer>
     <div class="footer-text">
-      <h2>Musquash ®</h2>
+      <div class="footer-logo">
+          <img src="ressources/images/logo_musquash.svg" alt="logo_musquash" >®
+        </div>
       <p>Texte à ajouter</p>
     </div>
     <div class="footer-liens">
@@ -15,7 +17,7 @@
       </ul>
     </div>
     <div class="footer-infos">
-      <h2>Musquash</h2></br>
+      <h2>Musquash®</h2></br>
       Adresse :</br>
       Mail :</br>
       Numéro de téléphone :</br>

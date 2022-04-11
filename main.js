@@ -1,32 +1,12 @@
 btnProfile = document.getElementById('btnProfile');
+tophead = document.querySelector('nav');
 btnProfile.onclick = function () {
-    alert('OK')
+    tophead.classList.toggle('open');
 };
 
 formInscription = document.getElementById("testPopUpInscription");
 
 btnInscription = document.getElementById("btnInscription");
-
-btnInscription.addEventListener('click', function () {
-    formInscription.classList.toggle("cachee");
-});
-
-
-function validationInscription() {
-    let mdp = document.getElementById('modifMdp1');
-    let mdpConfirmation = document.getElementById('modifMdp2');
-    let mdpProvisoire = document.getElementById('mdpProvisoire');
-
-    if (mdp.value !== mdpConfirmation.value) {
-        alert("Attention, les mots de passe ne correspondent pas !");
-        return false;
-    }
-    else if (mdpProvisoire.value == "") {
-        alert("Saisissez le mot de passe provisoire !");
-        return false;
-    }
-}
-
 
 formConnexion = document.getElementById("testPopUpConnexion");
 
@@ -51,3 +31,25 @@ fermePopUpConnexion = document.getElementById("fermePopUpConnexion");
 fermePopUpConnexion.onclick = function () {
     testPopUpConnexion.classList.toggle("cachee");
 }
+
+btnInscription.addEventListener('click', function () {
+    formInscription.classList.toggle("cachee");
+});
+
+
+function validationInscription() {
+    let mdp = document.getElementById('modifMdp1');
+    let mdpConfirmation = document.getElementById('modifMdp2');
+    let mdpProvisoire = document.getElementById('mdpProvisoire');
+
+    if (mdp.value !== mdpConfirmation.value) {
+        alert("Attention, les mots de passe ne correspondent pas !");
+        return false;
+    }
+    else if (mdpProvisoire.value == "") {
+        alert("Saisissez le mot de passe provisoire !");
+        return false;
+    }
+}
+
+
