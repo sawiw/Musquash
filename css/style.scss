@@ -375,8 +375,10 @@ nav {
   }
 }
 .container-services {
+  margin: 0 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color:red;
 }
 
 footer {

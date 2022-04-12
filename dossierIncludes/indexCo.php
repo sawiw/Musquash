@@ -152,7 +152,7 @@
         <!-- LES BOUTONS DEPASSENT -->
         <a href="squash.php"><h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3></a>
         <a href="adhesions.php"><h1 class="btn-orange">&nbsp NOS ADHÉSIONS &nbsp</h1></a>
-        <a href="planning.php"><h3 class="btn-blanc-bleu">&nbsp Planing Réservation &nbsp</h3></a>
+        <a href="planning.php"><h3 class="btn-blanc-bleu">&nbsp Planning Réservation &nbsp</h3></a>
       </div>
 
 
@@ -236,6 +236,7 @@
     <div class="services-baisc">
       Prix materiel non adhérent
       <div class="service-item">
+        <img src="" alt="image cardiomètre">
         <p>cardiomètre</p>
         <span>10€/j</span>
       </div>
@@ -243,7 +244,8 @@
     <div class="services-adherent">
       Prix materiel adhérent
       <div class="service-item">
-        <p>cardiomètre</p>
+        <img src="" alt="">
+        <p>balle de squash</p>
         <span>5€/j</span>
       </div>
     </div>
