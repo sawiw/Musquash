@@ -18,6 +18,7 @@ $orange: #f96244;
 .display-block {
   display: block;
 }
+
 .btn-orange {
   height: fit-content;
   cursor: pointer;
@@ -26,10 +27,26 @@ $orange: #f96244;
   border: 3px solid transparent;
   border-radius: 50px;
   box-shadow: 0 5px 15px black;
+  transition: ease-in-out 0.2s;
   &:hover {
     background: $blanc;
     border: 3px solid $orange;
     color: $orange;
+    transform: scale(1.1);
+  }
+}
+.btn-item-bleu {
+  cursor: pointer;
+  background: $bleu;
+  border: 3px solid $bleu;
+  color: $blanc;
+  border-radius: 50px;
+  transition: ease-in-out 0.2s;
+  &:hover {
+    color: $blanc;
+    // transform: scale(1.1);
+    border: 3px solid $blanc;
+    filter: brightness(0.8);
   }
 }
 .btn-blanc-orange {
@@ -38,10 +55,12 @@ $orange: #f96244;
   color: $orange;
   border: 3px solid $orange;
   border-radius: 50px;
+  
   &:hover {
     background: $blanc;
     border: 3px solid $orange;
     color: $orange;
+
   }
 }
 .btn-blanc-bleu {
@@ -50,10 +69,11 @@ $orange: #f96244;
   border: 3px solid $bleu;
   color: $blanc;
   border-radius: 50px;
+  transition: ease-in-out 0.2s;
   &:hover {
     background: transparent;
-    // border: 3px solid transparent;
     color: $blanc;
+    transform: scale(1.1);
   }
 }
 .titre-section {
@@ -210,7 +230,10 @@ nav {
       }
     }
   }
-  .btn-profile {display:none;}
+  .btn-profile {
+    display:none;
+  &:hover {transform: scale(1.1)}
+  }
 
   #btnMonCompte {
     margin: 0;
@@ -272,6 +295,7 @@ nav {
     a {
       border-radius: 50px;
       color: $blanc;
+      transition: ease-in-out 0.2s;
     }
     .nav {
       text-align: center;
@@ -350,6 +374,7 @@ nav {
       padding: 1em;
     }
     .images {
+      align-self: center;
       img {
         border-radius: 28px;
       }
@@ -364,6 +389,10 @@ nav {
       justify-content: flex-end;
       align-items: center;
     }
+    .text {
+      font-size: 133%;
+      text-align: center;
+    }
     .nos-adhesions {
       margin-top: 1em;
       width: 100%;
@@ -376,30 +405,35 @@ nav {
 }
 .container-services {
   margin: 0 1em;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   border:solid 5px #5965ff;
   border-radius: 50px;
-  justify-items: stretch;
-  .services-location {
+  >div {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;  
+    grid-template-columns: auto 40% auto;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
   }
-  .services-basic {
-    span {color: #5965ff;}
-    // .service-item{}
+  .tarif-simple {
+    span {color: $bleu}
   }
-  .services-adherent {
-    span {color: $orange;}
-    // .service-item{}
+  .tarif-adherent {
+    span {color: $orange}
   }
-  .service-item{
-    display:grid;
-    margin-top: 5em;
-    gap: 10%;
-    span {font-size:2em}
+  .service-header{
+    border: solid 3px #5965ff;
+    .titre-header-container {
+      display: flex;
+      justify-content: center;
+      .titre-header {
+        display: flex;
+        gap: 4%;
+      }
+    }
   }
+  
 }
 
 footer {

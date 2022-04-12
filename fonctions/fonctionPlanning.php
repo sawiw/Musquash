@@ -24,7 +24,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
     //Count pour vérifier qu'il y a des cours (sinon le fatal error pour afficher le planning)
     $countCoursSemaine = "SELECT COUNT(horaire_cours_squash_collectif) AS nb_cours FROM cours_squash_collectif WHERE id_terrain =:id AND (horaire_cours_squash_collectif BETWEEN :debut AND :fin)";
 
-    $sqlRechercheCours = "SELECT groupe_cours_squash_collectif, horaire_cours_squash_collectif,cours_squash_collectif_nombre_participants_actuel FROM cours_squash_collectif WHERE id_terrain =:id AND (horaire_cours_squash_collectif BETWEEN :debut AND :fin)"; 
+    $sqlRechercheCours = "SELECT groupe_cours_squash_collectif, horaire_cours_squash_collectif,cours_squash_collectif_nombre_participants_actuel FROM cours_squash_collectif WHERE id_terrain =:id AND (horaire_cours_squash_collectif BETWEEN :debut AND :fin)";
     try{
         $cnx = getBddConnexion();
         $stmt = $cnx->prepare($countCoursSemaine);
@@ -105,7 +105,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                     $semainePrecedente = $semaine-1;
                 }
 
-                array_push($cours, 
+                array_push($cours,
                 [$libelleCours,
                 $heureCours,
                 (10 - $adhesion['cours_squash_collectif_nombre_participants_actuel']),
@@ -134,7 +134,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                 width: 85%;
                 height:85%;
                 }
-                tr td{ 
+                tr td{
                 border: solid;
                 border-width: 1px;
                 }
@@ -142,7 +142,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
             <div class="container-planning">
             <h1>PLANNING MUSQUASH 2022</h1>
                 <br>
-            <div class="planning-nav"> 
+            <div class="planning-nav">
                 <form action="planning.php" method="GET">
                         <input type="hidden" name="semaine" value="' . $semainePrecedente . '">
                         <input type="submit" name="test" value="Semaine n°' . $semainePrecedente . '">
@@ -153,7 +153,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                     <input type="submit" name="test" value="Semaine n°' . $semaineSuivante . '">
                 </form>
             </div>
-            <div class="planning-nav"> 
+            <div class="planning-nav">
                 <form action="planning.php" method="GET">
                     <input type="hidden" name="semaine" value="'.$semaine.'">
                     <input type="hidden" name="terrain" value="'.$terrainPrecedent.'">
@@ -171,7 +171,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         <tr>
 
                             <th style="border: solid black 3px;"colspan="4">
-                            
+
                                 // <form action="planning.php" method="GET">
                                 //     <input type="hidden" name="semaine" value="'.$semainePrecedente.'">
                                 //     <input type="submit" name="test" value="Semaine n°'.$semainePrecedente.'">
@@ -222,7 +222,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                 $resultat .= '<tr>';
                 //Boucle jours (gauche droite)
                 for($y = 0; $y< 7; $y++){
-                    
+
                     if($y==0){
                         $resultat.='<td>'.$i.'h - '.($i+1).'h</td>';
                     }
@@ -234,9 +234,9 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         $resultat.='<td class="ferme">FERME</td>';
                         break;
                     }
-                    
+
                     foreach($cours as $coursSeul){
-                        
+
                         //Si cours collectif
                         if($coursSeul[1] == $i && $coursSeul[3]-1 == $y)
                         {
@@ -265,7 +265,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                                 $check=true;
                             }
                         }
-                        
+
                     }
                     if($check == true){
                         $check = false;
@@ -274,10 +274,10 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         $resultat.='<td class="terrain-libre">Terrain libre <br><br><button>Reserver</button></td> ';
 
                     }
-                
+
                 }
                 $resultat.='</tr>';
-                
+
             }
             $resultat.='</tbody></table></div>';
             // print_r($cours);
@@ -327,19 +327,19 @@ function planning(int $terrain, int $semaine, int $annee): string{
             <link rel="stylesheet" href="css/planning.css">
             <title>Musquash - Planning</title>
             </head>
-            
+
             <style>
                 table {
                 border-collapse: collapse;
                 width: 85%;
                 height:85%;
                 }
-                tr td{ 
+                tr td{
                 border: solid;
                 border-width: 1px;
                 }
             </style>
-            
+
             <h1>PLANNING MUSQUASH 2022</h1>
                 <br>
                 <table>
@@ -347,7 +347,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         <tr>
 
                         <th style="border: solid black 3px;"colspan="8">
-                            
+
                         <form action="planning.php" method="GET">
                             <input type="hidden" name="semaine" value="'.$semainePrecedente.'">
                             <input type="submit" name="test" value="Semaine n°'.$semainePrecedente.'">
@@ -403,7 +403,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
                         }
                         else{
                             $resultat.='<td class="terrain-libre">Terrain libre <br><br><button>Reserver</button></td> ';
-    
+
                         }
                     }
                     $resultat.='</tr>';
@@ -416,9 +416,7 @@ function planning(int $terrain, int $semaine, int $annee): string{
     catch(PDOException $err){
         die('Erreur : ' . $err->getMessage());
     }
-    
-    
-   
+
 }
 
 

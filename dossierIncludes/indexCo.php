@@ -180,7 +180,7 @@
         </div>
       </div>
 
-      <div class="Images">
+      <div class="images">
         <img src="ressources/images/image_muscu.png" alt="" srcset="">
         <div class="nos-adhesions">
         <a href="adhesions.php"><h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1></a>
@@ -213,7 +213,7 @@
         </div>
       </div>
 
-      <div class="Images">
+      <div class="images">
         <img src="ressources/images/image_gym.png" alt="" srcset="">
         <div class="nos-adhesions">
         <a href="adhesion.php"><h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1></a>

@@ -25,11 +25,27 @@
   border: 3px solid transparent;
   border-radius: 50px;
   box-shadow: 0 5px 15px black;
+  transition: ease-in-out 0.2s;
 }
 .btn-orange:hover {
   background: #fafaff;
   border: 3px solid #f96244;
   color: #f96244;
+  transform: scale(1.1);
+}
+
+.btn-item-bleu {
+  cursor: pointer;
+  background: #1f2eec;
+  border: 3px solid #1f2eec;
+  color: #fafaff;
+  border-radius: 50px;
+  transition: ease-in-out 0.2s;
+}
+.btn-item-bleu:hover {
+  color: #fafaff;
+  border: 3px solid #fafaff;
+  filter: brightness(0.8);
 }
 
 .btn-blanc-orange {
@@ -51,10 +67,12 @@
   border: 3px solid #1f2eec;
   color: #fafaff;
   border-radius: 50px;
+  transition: ease-in-out 0.2s;
 }
 .btn-blanc-bleu:hover {
   background: transparent;
   color: #fafaff;
+  transform: scale(1.1);
 }
 
 .titre-section {
@@ -218,6 +236,9 @@ nav .nav-btn-container .btn-inscription:hover svg {
 nav .btn-profile {
   display: none;
 }
+nav .btn-profile:hover {
+  transform: scale(1.1);
+}
 nav #btnMonCompte {
   margin: 0;
 }
@@ -282,6 +303,7 @@ nav #btnMonCompte {
 .navigation a {
   border-radius: 50px;
   color: #fafaff;
+  transition: ease-in-out 0.2s;
 }
 .navigation .nav {
   text-align: center;
@@ -347,6 +369,9 @@ nav #btnMonCompte {
 .container-formules .formule .infos {
   padding: 1em;
 }
+.container-formules .formule .images {
+  align-self: center;
+}
 .container-formules .formule .images img {
   border-radius: 28px;
 }
@@ -359,6 +384,10 @@ nav #btnMonCompte {
   justify-content: flex-end;
   align-items: center;
 }
+.container-formules .formule .text {
+  font-size: 133%;
+  text-align: center;
+}
 .container-formules .formule .nos-adhesions {
   margin-top: 1em;
   width: 100%;
@@ -370,30 +399,34 @@ nav #btnMonCompte {
 
 .container-services {
   margin: 0 1em;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   border: solid 5px #5965ff;
   border-radius: 50px;
-  justify-items: stretch;
 }
-.container-services .services-location {
+.container-services > div {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 40% auto;
+  align-items: center;
   justify-items: center;
+  text-align: center;
 }
-.container-services .services-basic span {
-  color: #5965ff;
+.container-services .tarif-simple span {
+  color: #1f2eec;
 }
-.container-services .services-adherent span {
+.container-services .tarif-adherent span {
   color: #f96244;
 }
-.container-services .service-item {
-  display: grid;
-  margin-top: 5em;
-  gap: 10%;
+.container-services .service-header {
+  border: solid 3px #5965ff;
 }
-.container-services .service-item span {
-  font-size: 2em;
+.container-services .service-header .titre-header-container {
+  display: flex;
+  justify-content: center;
+}
+.container-services .service-header .titre-header-container .titre-header {
+  display: flex;
+  gap: 4%;
 }
 
 footer {
