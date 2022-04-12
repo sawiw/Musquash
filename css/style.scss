@@ -253,7 +253,7 @@ nav {
     }
     .offre2 {
       padding: 1em;
-      background-color: rgb(179, 255, 0);
+      background-color: rgba(255, 200, 0, 0.548);
     }
   }
 }
@@ -377,11 +377,33 @@ nav {
 .container-services {
   margin: 0 1em;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color:red;
+  grid-template-rows: 1fr 1fr;
+  border:solid 5px #5965ff;
+  border-radius: 50px;
+  justify-items: stretch;
+  .services-location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;  
+  }
+  .services-basic {
+    span {color: #5965ff;}
+    // .service-item{}
+  }
+  .services-adherent {
+    span {color: $orange;}
+    // .service-item{}
+  }
+  .service-item{
+    display:grid;
+    margin-top: 5em;
+    gap: 10%;
+    span {font-size:2em}
+  }
 }
 
 footer {
+  bottom: 0;
   margin-top: 1em;
   padding-top: 1em;
   display: grid;
@@ -425,12 +447,25 @@ footer {
       grid-template-columns: 1fr 1fr;
     }
   }
-  .container-formules .formule {
+  .container-formules 
+  {
+    .formule {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-
+    &.squash {
+      .nos-adhesions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      }
+      .images {
+        grid-column-end: span 2;
+      }
+    }
   }
+}
+  
 }
 
 @media screen and (max-width: 700px) {

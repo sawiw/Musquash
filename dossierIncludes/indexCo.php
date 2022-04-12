@@ -101,7 +101,7 @@
         <img src="ressources/illustrations/muscu.svg" class="illu-hero">
       </a>
 
-      <a href="#Squash" class="nav orange" id="heroSquash">
+      <a href="squash.php" class="nav orange" id="heroSquash">
         <h1>SQUASH</h1>
         <img src="ressources/illustrations/squash.svg" class="illu-hero">
       </a>
@@ -168,15 +168,15 @@
         </div>
         <div class="text">
           INFOS <br>
-          -6 terrains<br>
+          -1 salle de Musculation<br>
           <br>
           Offres / Formules<br>
-          -Adhérent terrain<br>
-          -adhérent cours perso<br>
-          -adhérent cours groupe
+          -Formule adhérent Musculation<br>
+          (donne accée à la salle de musculation)
+
           <br><br>
           Tarifs<br>
-          -a PARTIR DE 10€
+          A partir de 29,99€/mois
         </div>
       </div>
 
@@ -200,15 +200,16 @@
         </div>
         <div class="text">
           INFOS <br>
-          -6 terrains<br>
+          -10 salles de gym<br>
           <br><br>
           Offres / Formules<br>
-          -Adhérent terrain<br>
-          -adhérent cours perso<br>
-          -adhérent cours groupe
+          -Adhésion cours perso<br>
+          -Adhésion cours groupe <br>
+          (Avec proffesseur dédié)
+
           <br><br>
           Tarifs<br>
-          -a PARTIR DE 10€
+          -A PARTIR DE 43,59€/mois
         </div>
       </div>
 
@@ -224,34 +225,12 @@
     </div>
   </div>
 
-  <!--contenaire service vente/loc -->
-  <div class="titre-section">
-    <div class="img-titre">
-      <img src="ressources/icons/M-Logo.svg" id="logoFormule">
-    </div>
-    <h1>Nos Services</h1>
-  </div>
 
-  <div class="container-services">
-    <div class="services-baisc">
-      Prix materiel non adhérent
-      <div class="service-item">
-        <img src="" alt="image cardiomètre">
-        <p>cardiomètre</p>
-        <span>10€/j</span>
-      </div>
-    </div>
-    <div class="services-adherent">
-      Prix materiel adhérent
-      <div class="service-item">
-        <img src="" alt="">
-        <p>balle de squash</p>
-        <span>5€/j</span>
-      </div>
-    </div>
-  </div>
   <?php
-  include 'dossierIncludes/footer.php'
+  include "dossierIncludes/services.php";
+  ?>
+  <?php
+  include "dossierIncludes/footer.php";
   ?>
   <script src="main.js"></script>
 </body>

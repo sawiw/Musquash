@@ -8,11 +8,11 @@
     <div class="footer-liens">
         <h2>Liens utiles</h2></br>
       <ul>
-        <li> <a href="#"> S'inscrire </a>
+        <li> <a href="#" id="btnInscription"> S'inscrire </a>
         </li>
-        <li> <a href="#"> Se connecter </a></li>
-        <li> <a href="#"> Squash </a></li>
-        <li> <a href="#"> Reservations </a></li>
+        <li> <a href="" id="btnConnexion"> Se connecter </a></li>
+        <li> <a href="squash.php"> Squash </a></li>
+        <li> <a href="planning.php"> Reservations </a></li>
 
       </ul>
     </div>

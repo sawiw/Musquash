@@ -302,7 +302,10 @@
   </div>
 
 <?php
-include "footer.php";
+include "dossierIncludes/services.php";
+?>
+<?php
+include "dossierIncludes/footer.php";
 ?>
 
 
