@@ -227,7 +227,7 @@
         </div>
       </div>
 
-      <div class="Images">
+      <div class="images">
         <img src="ressources\images\image_muscu.png" alt="image cours muscu">
         <div class="nos-adhesions">
           <a href="adhesions.php"><h1 class="btn-orange">&nbsp NOS ADHÉSIONS &nbsp</h1></a>
@@ -260,7 +260,7 @@
         </div>
       </div>
 
-      <div class="Images">
+      <div class="images">
         <img src="ressources/images/image_gym.png" alt="image cours de gym" srcset="">
         <div class="nos-adhesions">
           <a href="gym.php"><h3 class="btn-blanc-bleu">&nbsp Plus d'infos &nbsp</h3></a>
