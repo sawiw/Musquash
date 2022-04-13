@@ -249,14 +249,12 @@
         <div class="text">
           <h3>INFOS :</h3><br>
 
-          - Le club propose une grande variété de cours de gymnastique tels que le Step, le Cardio-Training, le Renforcement musculaire, etc. Un cours de gymnastique dure 1 heure. Les planning des cours de gymnastique sont établis par semaine pour le trimestre (le planning peut être révisé à chaque trimestre). Un cours de type prédéfini (par exemple le cours de step)
-          est toujours donné par le même professeur mais peut être dispensé à plusieurs créneaux horaires dans la semaine.<br>
-          4 profs dediés entierment à la discipline
+          -10 salles de gym<br>
           <br><br>
-          <h3>Offres :</h3><br>
-          Musquash propose jusqu'a 8 cours de Gym par semaine<br>
-          L'offre Gym vous permet de vous inscire a un des 8 cours chaque semaine
-          <br><br>
+          Offres / Formules<br>
+          -Adhésion cours perso<br>
+          -Adhésion cours groupe <br>
+          (Avec proffesseur dédié)<br><br>
           <h3>Tarifs :</h3><br>
           -a PARTIR DE 10€
         </div>
