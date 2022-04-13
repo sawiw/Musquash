@@ -365,6 +365,8 @@ nav {
     color: var(--blanc);
     margin-bottom: 3em;
 
+    
+
     .titre {
       display: flex;
       gap: 30px;
@@ -392,6 +394,7 @@ nav {
     .text {
       font-size: 133%;
       text-align: center;
+      span {color: $orange}
     }
     .nos-adhesions {
       margin-top: 1em;

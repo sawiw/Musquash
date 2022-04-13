@@ -388,6 +388,9 @@ nav #btnMonCompte {
   font-size: 133%;
   text-align: center;
 }
+.container-formules .formule .text span {
+  color: #f96244;
+}
 .container-formules .formule .nos-adhesions {
   margin-top: 1em;
   width: 100%;
