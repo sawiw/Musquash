@@ -8,8 +8,7 @@ if(array_key_exists('login', $_SESSION)){
     echo 'Connecté en tant que : ' . $_SESSION['login'] ;
 }
 else{
-    echo 'Non connecté
-    ';
+    echo 'Non connecté';
 }
 
 echo'<!DOCTYPE html>
@@ -18,36 +17,57 @@ echo'<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUSQUASH - Squash</title>
-</head>
-<body><form action="/index.php" method="post">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" type="image/x-icon" href="ressources/icons/favicon.ico">
+    <title>Musquash - Adhesions</title>
+</head>';
+echo '<body>';
+
+if(array_key_exists('login', $_SESSION)){
+    echo 'Connecté en tant que : ' . $_SESSION['login'] ;
+    include('dossierIncludes\barreNavCo.php');
+}
+else{
+    echo 'Non connecté
+    ';
+    include('dossierIncludes\barreNavNonCo.php');
+}
+//print_r($_SESSION);
+
+echo '
+<form action="index.php" method="post">
 <input type="submit" value="Retour à l\'accueil">
 </form>
-    <form action="/verifications/traitementAdhesion" method="GET">
-        <label for="squashColl">Adhésion cours de squash collectif</label>
-            <input type="radio" name="adhesion" value="1" id="squashColl" required><br>
-        <label for="squashInd">Adhésion cours de squash individuel</label>
-            <input type="radio" name="adhesion" value="2" id="squashInd"><br>
-        <label for="squashTerrain">Adhésion location de terrain de squash</label>
-            <input type="radio" name="adhesion" value="3" id="squashTerrain"><br>
-        <label for="gym">Adhésion cours de gym</label>
-            <input type="radio" name="adhesion" value="4" id="gym"><br>
-        <label for="squashColl">Adhésion musculation</label>
-            <input type="radio" name="adhesion" value="5" id="muscu">
-        <br><br>
-        <label for="duree">Durée de souscription : </label>
-        <select required name="duree" id="duree">
-            <option value="1">Mois</option>
-            <option value="3">Trimestre</option>
-            <option value="6">Semestre</option>
-            <option value="12">Année</option>
-          </select>
-          <br><br>
-        <input type="submit" name"validationForm" value="Souscrire">
-    </form>
-</body>
-</html>
+<div class="formulaire-adhesions">
+<form action="/verifications/traitementAdhesion" method="GET">
+<label for="squashColl">Adhésion cours de squash collectif</label>
+<input type="radio" name="adhesion" value="1" id="squashColl" required><br>
+<label for="squashInd">Adhésion cours de squash individuel</label>
+<input type="radio" name="adhesion" value="2" id="squashInd"><br>
+<label for="squashTerrain">Adhésion location de terrain de squash</label>
+<input type="radio" name="adhesion" value="3" id="squashTerrain"><br>
+<label for="gym">Adhésion cours de gym</label>
+<input type="radio" name="adhesion" value="4" id="gym"><br>
+<label for="squashColl">Adhésion musculation</label>
+<input type="radio" name="adhesion" value="5" id="muscu">
+<br><br>
+<label for="duree">Durée de souscription : </label>
+<select required name="duree" id="duree">
+<option value="1">Mois</option>
+<option value="3">Trimestre</option>
+<option value="6">Semestre</option>
+<option value="12">Année</option>
+</select>
+<br><br>
+<input type="submit" name"validationForm" value="Souscrire">
+</form>
+</div>
 ';
+include('dossierIncludes\footer.php');
+echo'</body>
+</html>';
 
 if(isset($_GET['validationForm'])){
     $reponse='';
@@ -121,8 +141,6 @@ if(isset($_GET['validationForm'])){
             ';
         }
         echo $reponse;
-        
-
     }
 
     catch(PDOException $err){

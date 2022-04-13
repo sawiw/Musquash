@@ -1,7 +1,7 @@
 <?php
 //constantes de connexion
 const HOST = '127.0.0.1';
-const PORT = '3307';
+const PORT = '3306';
 const DBNAME ='musquash_test_commun';
 const CHARSET = 'utf8';
 
