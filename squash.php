@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/squash.css">
     <link rel="icon" type="image/x-icon" href="ressources/icons/favicon.ico">
     <title>Musquash - Squash</title>
 </head>

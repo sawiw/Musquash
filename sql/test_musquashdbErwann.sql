@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `authentification` (
   `valide_authentification` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`mail_authentification`),
   KEY `fk_utilisateur_authentification` (`id_utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `authentification`
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `casier` (
   `id_utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`id_casier`),
   KEY `fk_utilisateur_casier` (`id_utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `cours_squash_collectif` (
   PRIMARY KEY (`id_cours_squash_collectif`),
   KEY `fk_prof_cours_squash_collectif` (`id_prof`),
   KEY `fk_terrain_cours_squash_collectif` (`id_terrain`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `cours_squash_collectif`
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `formule` (
   `nom_formule` varchar(30) DEFAULT NULL,
   `prix_formule` float DEFAULT NULL,
   PRIMARY KEY (`id_formule`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `formule`
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `materiel_achat` (
   `quantite_materiel_achat` int(11) DEFAULT NULL,
   `tarif_materiel_achat` float DEFAULT NULL,
   PRIMARY KEY (`id_materiel_achat`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `materiel_location` (
   `quantite_materiel_location` int(11) DEFAULT NULL,
   `tarif_materiel_location` float DEFAULT NULL,
   PRIMARY KEY (`id_materiel_location`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `planning_reservation` (
   PRIMARY KEY (`horaire_planning_reservation`,`type_reservation`,`id_utilisateur`,`id_terrain`),
   KEY `fk_utilisateur_planning_reservation` (`id_utilisateur`),
   KEY `fk_terrain_planning_reservation` (`id_terrain`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `planning_reservation`
@@ -202,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `prof` (
   `specialite_gym_prof` varchar(20) DEFAULT NULL,
   `id_prof` int(11) NOT NULL,
   PRIMARY KEY (`id_prof`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `prof`
@@ -227,7 +227,7 @@ CREATE TABLE IF NOT EXISTS `promo_formule` (
   `id_formule` int(11) NOT NULL,
   PRIMARY KEY (`id_promo_formule`),
   KEY `fk_formule_promo_formule` (`id_formule`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -240,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `terrain` (
   `prix_location` float DEFAULT NULL,
   `id_terrain` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_terrain`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `terrain`
@@ -268,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `date_naissance` date DEFAULT NULL,
   `groupe_utilisateur` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id_utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -297,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur_cours_squash_collectif` (
   `id_cours_squash_collectif` int(11) NOT NULL,
   PRIMARY KEY (`id_utilisateur`,`id_cours_squash_collectif`),
   KEY `fk_cours_squash_collectif_utilisateur_cours_squash_collectif` (`id_cours_squash_collectif`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `utilisateur_cours_squash_collectif`
@@ -322,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur_formule` (
   `duree_mois` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_utilisateur`,`id_formule`),
   KEY `fk_formule_utilisateur_formule` (`id_formule`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `utilisateur_formule`
@@ -347,7 +347,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur_materiel_achat` (
   PRIMARY KEY (`date_achat`,`id_utilisateur`,`id_materiel_achat`),
   KEY `fk_utilisateur_utilisateur_materiel_achat` (`id_utilisateur`),
   KEY `fk_materiel_achat_utilisateur_materiel_achat` (`id_materiel_achat`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -365,7 +365,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur_materiel_location` (
   PRIMARY KEY (`date_location`,`id_utilisateur`,`id_materiel_location`),
   KEY `fk_materiel_loaction_utilisateur_materiel_location` (`id_materiel_location`),
   KEY `fk_utilisateur_utilisateur_materiel_location` (`id_utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

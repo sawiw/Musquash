@@ -1,0 +1,50 @@
+/*PAGE admin Prof*/
+
+.adminProf{
+    display: flex;
+    flex-direction: column;
+    background-color: #7982fc;
+    border-radius: 5%;
+  }
+  .accueil-adminProf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f6f7fa;
+    border-radius: 2%;
+    padding: 3em;
+    justify-content: space-between;
+  }
+  .qualificatif-admiProf{
+    display: flex;
+    flex-direction: row;
+    background-color: #bcc0fa;
+    border-radius: 2%;
+    padding: 3em;
+    margin: 3em;
+    justify-content: space-between;
+  }
+  .gestion-adminProf{
+    display: flex;
+    flex-direction: row;
+    background-color: #bcc0fa;
+    border-radius: 2% ;
+    padding: 3em;
+    margin: 1.5em;
+    justify-content: space-evenly;
+  }
+  .gestion-client{
+    display: flex;
+    flex-direction: column;
+  }
+  .tableau-gestionClient{
+    display: flex;
+  }
+  .tabGestionClient{
+    border: 5px solid #000;
+    width:500px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    background-color: #fcfcfc; 
+  }

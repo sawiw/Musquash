@@ -37,32 +37,46 @@ else{
 //print_r($_SESSION);
 
 echo '
-<form action="index.php" method="post">
-<input type="submit" value="Retour à l\'accueil">
+<form action="index.php" method="post"style="display: flex;
+justify-content: center;">
+<input class="btn-item-bleu" type="submit" value="Retour à l\'accueil">
 </form>
 <div class="formulaire-adhesions">
-<form action="/verifications/traitementAdhesion" method="GET">
-<label for="squashColl">Adhésion cours de squash collectif</label>
-<input type="radio" name="adhesion" value="1" id="squashColl" required><br>
-<label for="squashInd">Adhésion cours de squash individuel</label>
-<input type="radio" name="adhesion" value="2" id="squashInd"><br>
-<label for="squashTerrain">Adhésion location de terrain de squash</label>
-<input type="radio" name="adhesion" value="3" id="squashTerrain"><br>
-<label for="gym">Adhésion cours de gym</label>
-<input type="radio" name="adhesion" value="4" id="gym"><br>
-<label for="squashColl">Adhésion musculation</label>
-<input type="radio" name="adhesion" value="5" id="muscu">
-<br><br>
-<label for="duree">Durée de souscription : </label>
-<select required name="duree" id="duree">
-<option value="1">Mois</option>
-<option value="3">Trimestre</option>
-<option value="6">Semestre</option>
-<option value="12">Année</option>
-</select>
-<br><br>
-<input type="submit" name"validationForm" value="Souscrire">
-</form>
+    <form action="/verifications/traitementAdhesion" method="GET">
+    <div class="item-formulaire-adhesions">
+        <label for="squashColl">Adhésion cours de squash collectif</label>
+        <input type="radio" name="adhesion" value="1" id="squashColl" required>
+    </div>
+
+    <div class="item-formulaire-adhesions">
+        <label for="squashInd">Adhésion cours de squash individuel</label>
+        <input type="radio" name="adhesion" value="2" id="squashInd">
+    </div>
+    <div class="item-formulaire-adhesions">
+        <label for="squashTerrain">Adhésion location de terrain de squash</label>
+        <input type="radio" name="adhesion" value="3" id="squashTerrain">
+    </div>
+    <div class="item-formulaire-adhesions">
+        <label for="gym">Adhésion cours de gym</label>
+        <input type="radio" name="adhesion" value="4" id="gym">
+    </div>
+    <div class="item-formulaire-adhesions">
+        <label for="squashColl">Adhésion musculation</label>
+        <input type="radio" name="adhesion" value="5" id="muscu">
+    </div>
+    <span>&nbsp;</span>
+    <div class="item-formulaire-adhesions">
+        <label for="duree">Durée de souscription : </label>
+        <select required name="duree" id="duree">
+            <option value="1">Mois</option>
+            <option value="3">Trimestre</option>
+            <option value="6">Semestre</option>
+            <option value="12">Année</option>
+    </select>
+    </div>
+    <br><br>
+    <input class="btn-blanc-orange" type="submit" name"validationForm" value="Souscrire">
+    </form>
 </div>
 ';
 include('dossierIncludes\footer.php');

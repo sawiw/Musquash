@@ -35,7 +35,7 @@
       <input type="email" name="mail" id="mail" maxlength="30" required>
       <br>
       <div style="display:flex;">
-        <input type="checkbox" name="rgpd">
+        <input type="checkbox" name="rgpd" required>
         <a href="rgpd.php" style="color:white;">Conditions d'utilisation</a>
       </div>
       <br>
