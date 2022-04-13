@@ -10,6 +10,7 @@ echo `<head>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/planning.css">
 <link rel="icon" type="image/x-icon" href="ressources/icons/favicon.ico">
 <title>Musquash - Planning Réservation</title>
 </head>`;
@@ -41,5 +42,5 @@ else{
     echo planning(1,$semaine,2022);
     print_r($_GET);
 }
-// echo planning(1,19,2022);
+include("dossierIncludes/footer.php")
 ?>

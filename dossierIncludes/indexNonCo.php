@@ -34,6 +34,11 @@
       <label for="mail">Mail : </label>
       <input type="email" name="mail" id="mail" maxlength="30" required>
       <br>
+      <div style="display:flex;">
+        <input type="checkbox" name="rgpd">
+        <a href="rgpd.php" style="color:white;">Conditions d'utilisation</a>
+      </div>
+      <br>
       <input type="submit" value="S'inscrire" id="validerInscription">
       <br>
       <div>

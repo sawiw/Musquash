@@ -10,8 +10,9 @@ h1 {
   margin-right: auto;
 }
 .container-planning .planning-nav {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border: solid;
   padding: 1em 0;
 }

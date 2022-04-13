@@ -19,14 +19,21 @@
     if(array_key_exists('login', $_SESSION)){
         echo 'Connecté en tant que : ' . $_SESSION['login'] ;
         include('dossierIncludes\barreNavCo.php');
+        include('dossierIncludes\squash_co.php');
     }
     else{
         echo 'Non connecté
         ';
         include('dossierIncludes\barreNavNonCo.php');
+        include('dossierIncludes\squash_deco.php');
     }
     //print_r($_SESSION);
-    ?>
+?>
+
+<?php
+include('dossierIncludes\services.php')?>
+</div>
+
 <?php
 include('dossierIncludes\footer.php')
 ?>    

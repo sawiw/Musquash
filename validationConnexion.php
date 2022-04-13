@@ -32,7 +32,37 @@ try{
             $_SESSION['login'] = $mdp['login_authentification'];
             $_SESSION['mail'] = $mdp['mail_authentification'];
             $_SESSION['valide'] = $mdp['valide_authentification'];
+            //VERIFICATION SI PROF
+            $verifProf = 'SELECT COUNT(*) AS prof FROM utilisateur INNER JOIN prof ON utilisateur.id_utilisateur = prof.id_prof WHERE id_utilisateur = :id;'; 
+            $cnx = getBddConnexion();
+            $stmt = $cnx->prepare($verifProf);
+            $stmt->bindParam(':id', $mdp['id_utilisateur']);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $row = $stmt->fetch();
+            $prof = $row['prof'];
 
+            if($prof > 0){
+                $_SESSION['prof'] = true;
+            }
+            else{
+                $_SESSION['prof'] = false; 
+            }
+            //VERIFICATION SI ADMIN
+            $verifAdmin = 'SELECT COUNT(*) AS adminMus FROM authentification WHERE id_utilisateur = :id AND role_authentification = "admin";';
+            $cnx = getBddConnexion();
+            $stmt = $cnx->prepare($verifAdmin);
+            $stmt->bindParam(':id', $mdp['id_utilisateur']);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $row = $stmt->fetch();
+            $admin = $row['adminMus'];
+            if($admin > 0){
+                $_SESSION['admin'] = true;
+            }
+            else{
+                $_SESSION['admin'] = false; 
+            }
             header('Location: index.php');
         }
         else{
@@ -41,6 +71,7 @@ try{
             echo("<script>alert('Mot de passe ou login erronné')</script>");
             echo 'Mot de passe ou login erronné';
         }
+
 
     }
     else{

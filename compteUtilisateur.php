@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('./sql/bddConnexion.php');
+require('sql/bddConnexion.php');
 echo'<h2>Bienvenue sur votre espace personnel Musquash '.$_SESSION['login'].'.</h2>';
 ?>
 
@@ -34,33 +34,35 @@ else{
 <?php
 if($_SESSION['valide'] == 0){
 echo'
-<div class="moncompte-formulaire">
+<div class="moncompte-container">
 <form action="index.php" method="post">
     <input type="submit" value="Retour à l\'accueil">
 </form>
 <h2>Changez votre mot de passe pour valider votre compte</h2>
-
-<form action="validationNouveauMdp.php" method="post" onsubmit="return validationNouveauMdp()">
-<label for="mdpProvisoire">Entrez votre mot de passe provisoire: </label>
-<input required type="password" minlength="8" maxlength="50" name="mdpProvisoire" id="mdpProvisoire">
-<label for="modifMdp1">Votre nouveau mot de passe : </label>
-<input required type="password" minlength="8" maxlength="50" name="modifMdp1" id="modifMdp1">
-<label for="">Confirmer votre mot de passe : </label>
-<input required type="password" minlength="8" maxlength="50" name="modifMdp2" id="modifMdp2">
-
-<input type="submit" value="Valider le nouveau mot de passe">
-</form>
+    <div class=moncompte-formulaire>
+        <form action="validationNouveauMdp.php" method="post" onsubmit="return validationNouveauMdp()">
+        <label for="mdpProvisoire">Entrez votre mot de passe provisoire: </label>
+        <input required type="password" minlength="8" maxlength="50" name="mdpProvisoire" id="mdpProvisoire">
+        <label for="modifMdp1">Votre nouveau mot de passe : </label>
+        <input required type="password" minlength="8" maxlength="50" name="modifMdp1" id="modifMdp1">
+        <label for="">Confirmer votre mot de passe : </label>
+        <input required type="password" minlength="8" maxlength="50" name="modifMdp2" id="modifMdp2">
+        <input type="submit" value="Valider le nouveau mot de passe">
+        </form>
+    </div>
 </div>';
 }
 else{
-    echo'<h2>Compte validé<h2><form action="index.php" method="post">
+    echo'<form action="index.php" method="post">
     <input type="submit" value="Retour à l\'accueil">
 </form>';
 }
 ?>
     
 
-
+<?php
+include("dossierIncludes/footer.php");
+?>
 <script src="main.js"></script>
 </body>
 </html>
