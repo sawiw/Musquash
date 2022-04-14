@@ -28,15 +28,7 @@ echo '<body>';
 if(array_key_exists('login', $_SESSION)){
     echo 'Connecté en tant que : ' . $_SESSION['login'] ;
     include('dossierIncludes\barreNavCo.php');
-}
-else{
-    echo 'Non connecté
-    ';
-    include('dossierIncludes\barreNavNonCo.php');
-}
-//print_r($_SESSION);
-
-echo '
+    echo '
 <form action="index.php" method="post"style="display: flex;
 justify-content: center;">
 <input class="btn-item-bleu" type="submit" value="Retour à l\'accueil">
@@ -79,6 +71,17 @@ justify-content: center;">
     </form>
 </div>
 ';
+}
+else{
+    include('dossierIncludes\barreNavNonCo.php');
+    echo "<div class='adhesions-pas-co'>
+    <h1>Veuillez vous connecter afin d'adhérer à une formule</h1>
+    </div>
+    ";
+}
+//print_r($_SESSION);
+
+
 include('dossierIncludes\footer.php');
 echo'</body>
 </html>';

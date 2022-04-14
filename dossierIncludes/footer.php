@@ -3,7 +3,11 @@
     <div class="footer-logo">
       <img src="ressources/images/logo_musquash.svg" alt="logo_musquash">®
     </div>
-    <p>Texte à ajouter</p>
+    <p>Musquash_2022 tous droits réservés
+      <br>
+      Espace Multi Sports Musquash
+    </p>
+    
   </div>
   <div class="footer-liens">
     <h2>Liens utiles</h2></br>
@@ -18,8 +22,8 @@
   </div>
   <div class="footer-infos">
     <h2>Musquash®</h2></br>
-    Adresse :</br>
+    Adresse : 1115 rue Hélene Boucher, 34130 Mauguio</br>
     Mail :</br>
-    Numéro de téléphone :</br>
+    Tel: 04 67 83 17 96
   </div>
 </footer>

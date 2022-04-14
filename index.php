@@ -16,16 +16,36 @@
 </head>
 
 <body>
-<?php
-    if(array_key_exists('login', $_SESSION)){
+<?php 
+    
+    if(array_key_exists('admin', $_SESSION)){
+      
+      if($_SESSION['admin'] == true && $_SESSION['prof'] == false){
         echo 'Connecté en tant que : ' . $_SESSION['login'] ;
-        include('dossierIncludes\indexCo.php');
+        include('backOffice/backOfficeAdmin.php');
+      }
     }
+    if(array_key_exists('prof', $_SESSION)){
+      
+      if($_SESSION['prof'] == true && $_SESSION['admin'] == false){
+        echo 'Connecté en tant que : ' . $_SESSION['login'] ;
+        include('backOffice/backOfficeProf.php');
+      }
+    }
+    
+    
+    if(array_key_exists('login', $_SESSION) && $_SESSION['prof'] == false && $_SESSION['admin'] == false){
+      echo 'Connecté en tant que : ' . $_SESSION['login'] ;
+      include('dossierIncludes\indexCo.php');
+    }
+
     else{
         echo 'Non connecté
         ';
         include('dossierIncludes\indexNonCo.php');
     }
+    
+    // var_dump($_SESSION);
     //print_r($_SESSION);
 ?>
 

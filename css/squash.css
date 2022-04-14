@@ -105,7 +105,14 @@
     width: 96%;
     margin: 2%;
   }
-
+  a {
+    text-decoration: none;
+    counter-reset: auto;
+  }
+  h4{
+    width:fit-content;
+    a {color: black;}
+  }
   /*formules*/
 
   .formules{

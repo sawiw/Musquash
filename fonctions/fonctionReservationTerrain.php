@@ -41,7 +41,7 @@ function reservationTerrain($idUtilisateur, $idTerrain, $date): string
             $stmt->bindParam(':dateReservation', $date);
             $stmt->bindParam(':idTerrain', $idTerrain);
             $stmt->execute();
-            return'<h1>Merci pour votre réservation, cela vous coutera 9.99€</h1><br><form action="/planning.php" method="POST">
+            return'<h1>Merci pour votre réservation, cela vous coutera 24.99€</h1><br><form action="/planning.php" method="POST">
             <input type="submit" value="Retour au planning">
             </form><br><form action="/index.php" method="POST">
             <input type="submit" value="Retour à l\'accueil">

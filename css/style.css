@@ -479,7 +479,6 @@ footer .footer-logo {
 .formulaire-adhesions {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid black;
   background-color: rgba(131, 139, 253, 0.2980392157);
 }
 .formulaire-adhesions span {
@@ -508,6 +507,16 @@ footer .footer-logo {
   margin-left: auto;
   font-size: 3em;
   padding: 0 1em;
+}
+
+.adhesions-pas-co {
+  background-color: red;
+  height: 70vh;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /*

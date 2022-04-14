@@ -187,7 +187,7 @@
           -adhérent cours groupe
           <br><br>
           Tarifs<br>
-          -a PARTIR DE 10€
+          -a PARTIR DE <span>9,99€</span>
         </div>
       </div>
 
@@ -223,7 +223,7 @@
           -adhérent cours groupe
           <br><br>
           Tarifs<br>
-          -a PARTIR DE 10€
+          A partir de <span>29,99€</span>/mois
         </div>
       </div>
 
@@ -256,14 +256,14 @@
           -Adhésion cours groupe <br>
           (Avec proffesseur dédié)<br><br>
           <h3>Tarifs :</h3><br>
-          -a PARTIR DE 10€
+          -A PARTIR DE <span>43,59€</span>/mois
         </div>
       </div>
 
       <div class="images">
         <img src="ressources/images/image_gym.png" alt="image cours de gym" srcset="">
         <div class="nos-adhesions">
-          <h1 class="btn-orange">&nbsp;ADHÉRER&nbsp;</h1>
+         <a href="adhesions.php"><h1 class="btn-orange">&nbspADHÉRER&nbsp</h1></a>
         </div>
       </div>
 

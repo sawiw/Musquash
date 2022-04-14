@@ -2,6 +2,7 @@
 
 require_once('../sql/bddConnexion.php');
 
+
 function reservationCoursColl($idUtilisateur, $idCours): string
 {
     //Verif si déjà inscrit dans un/des cours
